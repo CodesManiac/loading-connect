@@ -1,0 +1,13 @@
+@mixin CircularTheme(
+  $fontWeight: 700,
+  $fontSize: 48px,
+  $fontStyle: normal,
+  $lineHeight: 60px
+) {
+  font-family: Work Sans;
+  font-style: $fontStyle;
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+//add other default typography here
