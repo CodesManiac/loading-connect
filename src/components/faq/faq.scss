@@ -1,0 +1,53 @@
+@import "../../defaultStyles/Colors.scss";
+@import "../../defaultStyles/Typography.scss";
+@import "../../defaultStyles/MediaQueries.scss";
+
+.faq__container {
+  max-width: $pageWidth;
+  margin: 3.1rem auto;
+  padding: 5px $base-padding;
+  //   margin-top: 3.1rem;
+
+  h2 {
+    margin-bottom: 36px;
+    color: $primaryColor;
+    @include CircularTheme(700, 23px, normal, 29.09px);
+  }
+  .sub__container {
+    display: grid;
+    grid-template-columns: 70% 20%;
+    gap: 10%;
+
+    .tab__open {
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      p {
+        @include CircularTheme(700, 14px, normal, 17.71px);
+      }
+    }
+    .question {
+      p:first-child {
+        color: rgba(21, 20, 57, 0.4);
+        @include CircularTheme(700, 14px, normal, 17.71px);
+      }
+      p {
+        color: #19352a;
+        @include CircularTheme(400, 13px, normal, 16.44px);
+      }
+    }
+  }
+  .tab__content {
+    color: #311f36;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ebeaed;
+    @include CircularTheme(400, 14px, normal, 17.71px);
+  }
+  .bottom__line {
+    // padding-bottom: 10px;
+    border-bottom: 2px solid #ebeaed;
+    @include CircularTheme(400, 14px, normal, 17.71px);
+  }
+}

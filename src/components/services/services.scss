@@ -1,0 +1,18 @@
+@import "../../defaultStyles/Colors.scss";
+@import "../../defaultStyles/Typography.scss";
+@import "../../defaultStyles/MediaQueries.scss";
+
+.service__container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    img:last-child {
+        width: 100%;
+    }
+
+    .service__text{
+          padding: 5px $base-padding;
+    }
+}

@@ -1,0 +1,57 @@
+@import "../../defaultStyles/Colors.scss";
+@import "../../defaultStyles/Typography.scss";
+@import "../../defaultStyles/MediaQueries.scss";
+
+.wrapper {
+  // background-color: $primaryColor;
+  background: rgba(0, 118, 131, 0.8);
+  backdrop-filter: blur(200px);
+  color: $whiteColor;
+
+  .nav__container {
+    // position: fixed;
+    // max-width: 1400px;
+    // margin: 0 auto;
+    // padding: 5px 3.1rem;
+    max-width: $pageWidth;
+    margin: 0 auto;
+    padding: 5px $base-padding;
+
+    .nav__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        display: inline-block;
+        margin-right: 1.25rem;
+      }
+      a {
+        margin-right: 1rem;
+        @include CircularTheme(500, 14px, normal, 17.71px);
+      }
+      .truck__owner {
+        color: $lightSecondaryColor;
+        font-weight: 900;
+      }
+      .login__link {
+        color: $lightSecondaryColor;
+        font-weight: 700;
+        padding: 10px 20px 10px 20px;
+      }
+      .nav__btn {
+        background-color: $lightSecondaryColor;
+        color: $primaryColor;
+        padding-top: 1rem;
+        padding-bottom: 0.8rem;
+        padding-left: 2.6rem;
+        padding-right: 2.6rem;
+        border-radius: 10px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-left: 10px;
+      }
+    }
+    .nav__item div:first-child {
+    }
+  }
+}
