@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Circular Std Font";
   src: local("Circular Std Font") url(./assets/fonts/Circular Std Font.otf)
-    format("opentype");
+  format("opentype");
 }
 body {
   margin: 0;
