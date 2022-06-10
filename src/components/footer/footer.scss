@@ -1,0 +1,74 @@
+@import "../../defaultStyles/Colors.scss";
+@import "../../defaultStyles/Typography.scss";
+@import "../../defaultStyles/MediaQueries.scss";
+
+.footer__container {
+  margin-top: 5rem;
+  background: $darkColor;
+  color: $whiteColor;
+  .sub__container {
+    max-width: $pageWidth;
+    margin: 0 auto;
+    padding: 70px $base-padding 2rem $base-padding;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    .load__connect {
+      //   color: #3f2d66;
+      color: $primaryColor;
+      @include CircularTheme(700, 2rem, normal, 56.44px);
+    }
+    .nigeria {
+      display: flex;
+      justify-content: flex-end;
+      color: #ffe081;
+      max-width: 65%;
+      margin-top: -0.7rem;
+      @include CircularTheme(700, 10px, normal, 12.44px);
+    }
+    .copy__right {
+      margin-top: 2rem;
+      @include CircularTheme(500, 12px, normal, 26px);
+    }
+    .social__icon {
+      margin-top: 2rem;
+      i {
+        padding: 8px;
+        border-radius: 50%;
+        margin-right: 1rem;
+        background: #101e1a;
+        box-shadow: 5px 9.9px 9.9px hsl(0deg 0% 0% / 0.5);
+      }
+    }
+    .quick__link,
+    .support__footer,
+    .install__app {
+      h2 {
+        margin-bottom: 20px;
+        @include CircularTheme(500, 20px, normal, 30px);
+      }
+      .vector {
+        display: flex;
+        align-items: center;
+        gap: 2.2rem;
+        margin-bottom: 10px;
+        @include CircularTheme(500, 14px, normal, 26px);
+        a {
+          color: #8ddca4;
+        }
+      }
+      .footer__links {
+        display: block;
+        margin: 10px 0;
+        @include CircularTheme(500, 14px, normal, 26px);
+      }
+    }
+    .mobile__link img {
+      border: 1px solid #fff;
+      border-radius: 7px;
+      margin-bottom: 11px;
+      width: 10.2rem;
+      height: 3rem;
+    }
+  }
+}
