@@ -38,9 +38,17 @@
       }
     }
   }
-  .work__btn{
+  .work__btn {
     display: flex;
     justify-content: center;
     padding-bottom: 2.3rem;
+  }
+  @include desktop {
+    .work__layout {
+      grid-template-columns: 1fr;
+    }
+  }
+  @include phone {
+
   }
 }

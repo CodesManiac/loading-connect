@@ -71,4 +71,40 @@
       height: 3rem;
     }
   }
+  @include desktop {
+    .sub__container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @include tablet {
+  }
+  @include phone {
+    .sub__container {
+      gap: 1rem;
+      padding-left: $mobile-padding;
+      padding-right: $mobile-padding;
+      .load__connect {
+        @include CircularTheme(700, 1.5rem, normal, 34.44px);
+      }
+      .nigeria {
+        max-width: 90%;
+        margin-top: -0.2rem;
+        @include CircularTheme(700, 10px, normal, 12.44px);
+      }
+      .social__icon {
+        margin-top: 2rem;
+        i {
+          padding: 8px;
+          margin-right: 0.5rem;
+        }
+      }
+      .quick__link,
+      .support__footer,
+      .install__app {
+        h2 {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
 }

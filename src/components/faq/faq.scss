@@ -51,3 +51,17 @@
     @include CircularTheme(400, 14px, normal, 17.71px);
   }
 }
+
+@include desktop {
+  .faq__container {
+    .sub__container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+@include phone {
+  .faq__container {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
+}

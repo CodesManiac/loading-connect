@@ -8,12 +8,6 @@
   padding: 5px $base-padding;
   color: $whiteColor;
 
-  // @include CircularTheme(700, 3rem, normal, 60px);
-
-  @include tablet {
-    // @include CircularTheme(300, 1rem, 60px);
-  }
-  // margin-top: 8rem;
   min-height: 78vh;
   background-repeat: no-repeat;
   background-image: linear-gradient(
@@ -56,5 +50,38 @@
     display: flex;
     gap: 12px;
     margin-top: 13px;
+  }
+}
+@include desktop {
+  .hero__container {
+    // height: 100%;
+    background-image: linear-gradient(
+      85.16deg,
+      #007683 0%,
+      #77c88e 52.51%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    .header__title {
+      width: 100%;
+    }
+    p {
+      margin-top: 10px;
+      width: 100%;
+      @include CircularTheme(500, 14px, normal, 17.71px);
+    }
+    .btn{
+       display: block;
+      text-align: center;
+    }
+    .btn__learn{
+      display: block;
+      text-align: center;
+    }
+  }
+}
+@include phone {
+  .hero__container {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
   }
 }
