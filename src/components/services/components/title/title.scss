@@ -2,17 +2,24 @@
 @import "../../../../defaultStyles/Typography.scss";
 @import "../../../../defaultStyles/MediaQueries.scss";
 
-.title__wrapper{
+.title__wrapper {
+  h3 {
+    color: $primaryColor;
+    margin-bottom: 10px;
+    @include CircularTheme(700, 24px, normal, 30.34px);
+  }
+  p {
+    margin-bottom: 3rem;
+    width: 70%;
+    color: #19352a;
+    @include CircularTheme(500, 13px, normal, 16.44px);
+  }
+}
 
-    h3{
-        color: $primaryColor;
-        margin-bottom: 10px;
-        @include CircularTheme(700, 24px, normal, 30.34px);
-    }
+@include desktop {
+  .title__wrapper {
     p {
-        margin-bottom: 3rem;
-        width: 70%;
-        color: #19352A;
-        @include CircularTheme(500, 13px, normal, 16.44px);
+      width: 100%;
     }
+  }
 }

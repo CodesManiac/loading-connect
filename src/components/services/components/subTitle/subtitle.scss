@@ -17,3 +17,11 @@
     @include CircularTheme(400, 12px, normal, 15.18px);
   }
 }
+
+@include desktop {
+  .service__wrapper {
+    p {
+      width: 90%;
+    }
+  }
+}

@@ -44,7 +44,7 @@ const Service = () => {
           <Button url="/">Find Loans</Button>
         </div>
       </div>
-      <img src={LaptopScreen} alt="" />
+      <img className="mobile__screen" src={LaptopScreen} alt="" />
     </div>
   );
 };
