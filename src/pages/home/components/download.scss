@@ -4,6 +4,7 @@
 
 .download__container {
   background-image: url("../../../assets/images/bg.svg");
+  background-repeat: no-repeat;
 
   .sub__container {
     max-width: $pageWidth;
@@ -11,7 +12,6 @@
     padding: 5px $base-padding;
     display: grid;
     grid-template-columns: 1fr 22% 25%;
-
 
     h2 {
       padding-top: 113px;
@@ -33,8 +33,26 @@
       gap: 12px;
       margin-top: 0.6rem;
     }
-    .mobile__screen img {
-      // display: block;
+  }
+  @include desktop {
+    .sub__container {
+      grid-template-columns: 1fr;
+      padding-bottom: 2rem;
+      .mobile__screen {
+        display: none;
+      }
+      h2{
+          padding-top: 3rem;
+      }
+      p {
+        width: 100%;
+      }
+    }
+  }
+  @include phone {
+    .sub__container {
+      padding-left: $mobile-padding;
+      padding-right: $mobile-padding;
     }
   }
 }

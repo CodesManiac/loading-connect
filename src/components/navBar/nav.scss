@@ -55,3 +55,22 @@
     }
   }
 }
+
+@include desktop {
+  .wrapper {
+    .truck__owner,
+    .login__link,
+    .nav__btn {
+      display: none;
+    }
+  }
+}
+
+@include phone {
+  .wrapper {
+    .nav__container {
+      padding-left: $mobile-padding;
+      padding-right: $mobile-padding;
+    }
+  }
+}

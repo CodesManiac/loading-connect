@@ -4,7 +4,7 @@ import appleStore from "../../../assets/images/Group.svg";
 import TopScreen from "../../../assets/images/phone.svg";
 import BottomScreen from "../../../assets/images/phone2.svg";
 
-import "./download.scss"
+import "./download.scss";
 
 const DownloadSession = () => {
   return (
@@ -30,10 +30,13 @@ const DownloadSession = () => {
             </a>
           </div>
         </div>
-        {/* <div className="mobile__screen"> */}
-          <img src={TopScreen} alt="phone screen" />
-          <img style={{paddingTop: '3.1rem'}} src={BottomScreen} alt="bottom phone screen" />
-        {/* </div> */}
+        <img className="mobile__screen" src={TopScreen} alt="phone screen" />
+        <img
+          className="mobile__screen"
+          style={{ paddingTop: "3.1rem" }}
+          src={BottomScreen}
+          alt="bottom phone screen"
+        />
       </div>
     </div>
   );

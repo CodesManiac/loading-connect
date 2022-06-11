@@ -3,16 +3,33 @@
 @import "../../defaultStyles/MediaQueries.scss";
 
 .service__container {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-    img:last-child {
-        width: 100%;
-    }
+  img:last-child {
+    width: 100%;
+  }
 
-    .service__text{
-          padding: 5px $base-padding;
+  .service__text {
+    padding: 5px $base-padding;
+  }
+}
+
+@include desktop {
+  .service__container {
+    grid-template-columns: 1fr;
+    .mobile__screen {
+      display: none;
     }
+  }
+}
+@include phone {
+  .service__container {
+    .service__text {
+      padding-left: $mobile-padding;
+      padding-right: $mobile-padding;
+    }
+  }
 }
