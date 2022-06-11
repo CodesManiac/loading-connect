@@ -1,0 +1,40 @@
+@import "../../defaultStyles/Colors.scss";
+@import "../../defaultStyles/Typography.scss";
+@import "../../defaultStyles/MediaQueries.scss";
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    background: $grayColor; 
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0.6em;
+    width: 100%;
+    @include CircularTheme(500, 12px, normal, 12px);
+}
+
+.label-field{
+    color: $lightBlackColor;
+    padding-bottom: 3px;
+}
+
+.input-field{
+    background: $grayColor;
+    border-radius: 10px;
+    border: none;
+    font-size: 24px;
+}
+
+.input-field::placeholder{
+    font-size: 16px;
+}
+
+.input-field:-webkit-autofill,
+.input-field:-webkit-autofill:hover, 
+.input-field:-webkit-autofill:focus, 
+.input-field:-webkit-autofill:active,
+.input-field:focus  {
+    -webkit-box-shadow: 0 0 0 30px $grayColor inset;
+    box-shadow: 0 0 0 30px $grayColor inset;
+    outline: none;
+}
