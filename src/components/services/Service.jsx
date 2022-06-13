@@ -40,7 +40,7 @@ const Service = () => {
         {data.map((item) => (
           <SubTitle key={item.id} item={item} />
         ))}
-        <div style={{marginTop: '51px'}}>
+        <div className="find__loan" style={{marginTop: '51px'}}>
           <Button url="/">Find Loans</Button>
         </div>
       </div>
