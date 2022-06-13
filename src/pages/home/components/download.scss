@@ -41,8 +41,16 @@
       .mobile__screen {
         display: none;
       }
-      h2{
-          padding-top: 3rem;
+      span {
+        display: flex;
+        justify-content: center;
+      }
+      .mobile__link {
+        display: flex;
+        justify-content: center;
+      }
+      h2 {
+        padding-top: 3rem;
       }
       p {
         width: 100%;

@@ -58,7 +58,7 @@ const Faq = () => {
             We are Load Connect are committed to helping and answering any
             questions you might have
           </p>
-          <div style={{ marginTop: "2rem" }}>
+          <div className="find__loan" style={{ marginTop: "2rem" }}>
             <Button url="/">Find Loans</Button>
           </div>
         </div>
