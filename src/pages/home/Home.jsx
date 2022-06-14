@@ -1,7 +1,8 @@
 import React from "react";
-import { Faq, NavBar, Footer, Service, Work, Header } from "../../components";
-import DownloadSession from "./components/DownloadSession";
-
+import { Faq, NavBar, Footer, Service, Work, Header, DownloadSession } from "../../components";
+import { works } from "../../data";
+import TopScreen from "../../assets/images/phone.svg";
+import BottomScreen from "../../assets/images/phone2.svg";
 //landing page
 const Home = () => {
   return (
@@ -9,8 +10,8 @@ const Home = () => {
       <NavBar />
       <Header />
       <Service />
-      <Work/>
-      <DownloadSession/>
+      <Work dataObject={works} text="Find Loans"/>
+      <DownloadSession url={TopScreen} Img={BottomScreen} />
       <Faq/>
       <Footer/>
     </div>

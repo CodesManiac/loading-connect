@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/images/Logo.svg";
 import "./nav.scss";
 
@@ -12,18 +13,18 @@ const NavBar = () => {
               {" "}
               <img src={Logo} alt="" />
             </a>
-            <a className="link__btn" href="/" rel="noreferrer">
+            <Link className="link__btn" to="/howitwork">
               How it Works
-            </a>
+            </Link>
             <a className="link__btn" href="/" rel="noreferrer">
               Download
             </a>
-            <a className="link__btn" href="/" rel="noreferrer">
+            <Link className="link__btn" to="/about">
               About
-            </a>
-            <a className="link__btn" href="/" rel="noreferrer">
+            </Link>
+            <Link className="link__btn" to="/pricing">
               Pricing
-            </a>
+            </Link>
             <a className="link__btn" href="/" rel="noreferrer">
               FAQ
             </a>
