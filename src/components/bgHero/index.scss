@@ -23,3 +23,12 @@
     @include CircularTheme(400, 12px, normal, 15.18px);
   }
 }
+
+@include phone {
+  .bg__wrapper {
+    padding: 5px $mobile-padding;
+    h1, p{
+      width: 100%;
+    }
+  }
+}

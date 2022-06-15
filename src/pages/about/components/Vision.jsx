@@ -1,11 +1,12 @@
 import React from "react";
-// import Image from "../../../assets/images/group.png";
+import Image from "../../../assets/images/MaskGroup.png";
+import Image2 from "../../../assets/images/Mask Group.png";
 import "./index.scss";
 
 const Vision = () => {
   return (
     <div className="vision__container">
-      <div className="vision__text">
+      <div className="who__we__are">
         <h1>Who are we?</h1>
         <p>
           Sed varius nunc vel congue. Nibh et malesuada elit condimentum. Mauris
@@ -18,9 +19,13 @@ const Vision = () => {
           facilisis accumsan.
         </p>
       </div>
-      <div className="vision__bg">{/* <img src={Image} alt="" /> */}</div>
-      <div className="our__vision">{/* <img src={Image} alt="" /> */}</div>
-      <div>
+      <div className="vision__bg">
+        <img src={Image2} alt="" />
+      </div>
+      <div className="our__vision">
+        <img src={Image} alt="our vision" />
+      </div>
+      <div className="vision__text" >
         <h1>Our Vision</h1>
         <p>
           Sed varius nunc vel congue. Nibh et malesuada elit condimentum. Mauris
