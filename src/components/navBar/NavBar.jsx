@@ -1,5 +1,5 @@
 import React from "react";
-// import { a } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/images/Logo.svg";
 import "./nav.scss";
 
@@ -13,19 +13,19 @@ const NavBar = () => {
               {" "}
               <img src={Logo} alt="" />
             </a>
-            <a href="/" rel="noreferrer">
+            <Link className="link__btn" to="/howitwork">
               How it Works
-            </a>
-            <a href="/" rel="noreferrer">
+            </Link>
+            <a className="link__btn" href="/" rel="noreferrer">
               Download
             </a>
-            <a href="/" rel="noreferrer">
+            <Link className="link__btn" to="/about">
               About
-            </a>
-            <a href="/" rel="noreferrer">
+            </Link>
+            <Link className="link__btn" to="/pricing">
               Pricing
-            </a>
-            <a href="/" rel="noreferrer">
+            </Link>
+            <a className="link__btn" href="/" rel="noreferrer">
               FAQ
             </a>
             <a className="truck__owner" href="/" rel="noreferrer">
@@ -33,12 +33,15 @@ const NavBar = () => {
             </a>
           </div>
           <div>
-            <a className="login__link" href="/" rel="noreferrer">
+            <a className="login__link" href="/login" rel="noreferrer">
               Login
             </a>
             <a className="nav__btn" href="/" rel="noreferrer">
               Send A Package
             </a>
+          </div>
+          <div className="menu__bar">
+            {/* <i class="fa-solid fa-bars"></i> */}
           </div>
         </div>
       </div>

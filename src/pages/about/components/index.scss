@@ -1,0 +1,57 @@
+@import "../../../defaultStyles/Colors.scss";
+@import "../../../defaultStyles/Typography.scss";
+@import "../../../defaultStyles/MediaQueries.scss";
+
+.vision__container {
+  display: grid;
+  grid-template-columns: 40% 30%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+
+  .who__we__are {
+    padding-left: $base-padding;
+  }
+
+  h1 {
+    @include CircularTheme(700, 23px, normal, 29.09px);
+    color: $primaryColor;
+  }
+  p {
+    @include CircularTheme(400, 13px, normal, 16.44px);
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .vision__bg {
+    margin-top: 5rem;
+    background-repeat: no-repeat;
+
+    height: 30vh;
+    background-image: url("../../../assets/images/Rectangle.png");
+
+    img {
+      width: 100%;
+      transform: translate(-3rem, -5rem);
+    }
+  }
+  .vision__text {
+    padding-right: $base-padding;
+    margin-top: 100px;
+  }
+  .our__vision {
+    margin-top: 10rem;
+    height: 30vh;
+    background-image: url("../../../assets/images/Rectangle\ 62.png");
+    background-repeat: no-repeat;
+
+    img {
+      transform: translate(3rem, -12rem);
+    }
+  }
+  div:last-child {
+    margin-bottom: 10rem;
+  }
+}

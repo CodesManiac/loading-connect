@@ -15,7 +15,8 @@
   }
   .sub__container {
     display: grid;
-    grid-template-columns: 70% 20%;
+    grid-template-columns: 65% 30%;
+    justify-content: space-between;
     gap: 10%;
 
     .tab__open {
@@ -29,11 +30,14 @@
     }
     .question {
       p:first-child {
+        margin-bottom: .5rem;
         color: rgba(21, 20, 57, 0.4);
         @include CircularTheme(700, 14px, normal, 17.71px);
+        margin-bottom: .5rem;
       }
       p {
         color: #19352a;
+        width: 70%;
         @include CircularTheme(400, 13px, normal, 16.44px);
       }
     }
@@ -56,6 +60,15 @@
   .faq__container {
     .sub__container {
       grid-template-columns: 1fr;
+      .find__loan{
+        display:flex;
+        justify-content: center;
+      }
+       .question{
+        p{
+          width: 100%;
+        }
+       }
     }
   }
 }

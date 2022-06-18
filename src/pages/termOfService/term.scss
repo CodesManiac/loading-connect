@@ -1,0 +1,23 @@
+@import "../../defaultStyles/Colors.scss";
+@import "../../defaultStyles/Typography.scss";
+@import "../../defaultStyles/MediaQueries.scss";
+.terms__service {
+  max-width: $pageWidth;
+  margin: 0 auto;
+  padding: 5px $base-padding;
+  margin-bottom: 20rem;
+  h1 {
+    margin-top: 50px;
+    @include CircularTheme(700, 24px, normal, 30.36px);
+    color: $primaryColor;
+  }
+  p {
+    @include CircularTheme(400, 13px, normal, 16.44px);
+  }
+}
+
+@include phone {
+  .terms__service {
+    padding: 5px $mobile-padding;
+  }
+}

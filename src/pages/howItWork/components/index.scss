@@ -1,0 +1,102 @@
+@import "../../../defaultStyles/Colors.scss";
+@import "../../../defaultStyles/Typography.scss";
+@import "../../../defaultStyles/MediaQueries.scss";
+
+.hero__page {
+  // max-width: $pageWidth;
+  margin: 0 auto;
+  padding: 5px $base-padding;
+  color: $whiteColor;
+
+  min-height: 78vh;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      85.16deg,
+      #8ddca4 0%,
+      #d2de8f 53.48%,
+      rgba(255, 224, 129, 0) 93.35%
+    ),
+    url("../../../assets/images/image\ 2.png");
+  background-position: right;
+
+  .header__title {
+    margin-top: 3.2rem;
+    @include CircularTheme(700, 2.3rem, 45.54px);
+    width: 42%;
+    color: $primaryColor;
+  }
+  p {
+    margin-top: 10px;
+    width: 45%;
+    @include CircularTheme(400, 12px, normal, 15.18px);
+    color: #311f36;
+  }
+  .btn__link {
+    margin-top: 2.5rem;
+    margin-bottom: 8.8rem;
+
+    @include CircularTheme(700, 14px, normal, 17.71px);
+  }
+  .btn {
+    background-color: $primaryColor;
+    padding: 21px 5rem;
+    border-radius: 10px;
+  }
+  .btn__learn {
+    padding: 21px 52px;
+    color: $primaryColor;
+  }
+  span {
+    @include CircularTheme(700, 14px, normal, 17.71px);
+    color: #311f36;
+  }
+  .mobile__link {
+    display: flex;
+    gap: 12px;
+    margin-top: 13px;
+  }
+}
+@include desktop {
+  .hero__page {
+    // height: 100%;
+    background-image: linear-gradient(
+      85.16deg,
+      #007683 0%,
+      #77c88e 52.51%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    .header__title {
+      width: 100%;
+    }
+    p {
+      margin-top: 10px;
+      width: 100%;
+      @include CircularTheme(500, 14px, normal, 17.71px);
+    }
+    .btn {
+      display: block;
+      text-align: center;
+    }
+    .btn__learn {
+      display: block;
+      text-align: center;
+    }
+    .btn__link {
+      margin-bottom: 3.8rem;
+    }
+    .mobile__link {
+      display: flex;
+      gap: 12px;
+      margin-top: 13px;
+    }
+  }
+}
+@include phone {
+  .hero__page {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+    .mobile__link {
+      padding-bottom: 1rem;
+    }
+  }
+}

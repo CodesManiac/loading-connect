@@ -1,0 +1,18 @@
+@import "../../../../defaultStyles/Colors.scss";
+@import "../../../../defaultStyles/Typography.scss";
+@import "../../../../defaultStyles/MediaQueries.scss";
+
+.yearly__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 8rem auto 12rem auto;
+  padding: 5px $base-padding;
+  gap: 20px;
+  max-width: $pageWidth;
+}
+
+@include desktop {
+  .yearly__wrapper {
+    grid-template-columns: 1fr;
+  }
+}

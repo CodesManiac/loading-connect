@@ -1,0 +1,34 @@
+@import "../../defaultStyles/Colors.scss";
+@import "../../defaultStyles/Typography.scss";
+@import "../../defaultStyles/MediaQueries.scss";
+
+.bg__wrapper {
+  background-image: url("../../assets/images/bgHero.svg");
+  //   border: 3px solid red;
+  h1 {
+    margin: auto;
+    padding-top: 50px;
+    text-align: center;
+    @include CircularTheme(700, 36px, normal, 45.54px);
+    color: $lightSecondaryColor;
+    width: 50%;
+  }
+  p {
+    padding-top: 20px;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding-bottom: 92px;
+    color: $whiteColor;
+    @include CircularTheme(400, 12px, normal, 15.18px);
+  }
+}
+
+@include phone {
+  .bg__wrapper {
+    padding: 5px $mobile-padding;
+    h1, p{
+      width: 100%;
+    }
+  }
+}

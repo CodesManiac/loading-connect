@@ -1,0 +1,16 @@
+@import "../../defaultStyles/Colors.scss";
+@import "../../defaultStyles/Typography.scss";
+@import "../../defaultStyles/MediaQueries.scss";
+
+.time {
+  color: $lightBlackColor;
+  font-weight: 600;
+}
+.time span {
+  color: $secondaryColor;
+  cursor: pointer;
+}
+.edit{
+    color: $primaryColor;
+    font-weight: 700;
+}

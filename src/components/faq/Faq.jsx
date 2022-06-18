@@ -1,7 +1,7 @@
 import React from "react";
 import ArrowOpen from "../../assets/images/arrowlef.svg";
 import ArrowRight from "../../assets/images/arrowright.svg";
-import Button from "../button/Button";
+import Button from "../linkBtn/Button";
 
 import "./faq.scss";
 const Faq = () => {
@@ -58,7 +58,7 @@ const Faq = () => {
             We are Load Connect are committed to helping and answering any
             questions you might have
           </p>
-          <div style={{ marginTop: "2rem" }}>
+          <div className="find__loan" style={{ marginTop: "2rem" }}>
             <Button url="/">Find Loans</Button>
           </div>
         </div>

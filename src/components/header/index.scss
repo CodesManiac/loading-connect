@@ -69,13 +69,21 @@
       width: 100%;
       @include CircularTheme(500, 14px, normal, 17.71px);
     }
-    .btn{
-       display: block;
-      text-align: center;
-    }
-    .btn__learn{
+    .btn {
       display: block;
       text-align: center;
+    }
+    .btn__learn {
+      display: block;
+      text-align: center;
+    }
+    .btn__link {
+      margin-bottom: 3.8rem;
+    }
+    .mobile__link {
+      display: flex;
+      gap: 12px;
+      margin-top: 13px;
     }
   }
 }
@@ -83,5 +91,8 @@
   .hero__container {
     padding-left: $mobile-padding;
     padding-right: $mobile-padding;
+    .mobile__link {
+      padding-bottom: 1rem;
+    }
   }
 }

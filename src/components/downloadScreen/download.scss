@@ -1,0 +1,68 @@
+@import "../../defaultStyles/Colors.scss";
+@import "../../defaultStyles/Typography.scss";
+@import "../../defaultStyles/MediaQueries.scss";
+
+.download__container {
+  background-image: url("../../assets/images/bg.svg");
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: 100%;
+
+  .sub__container {
+    max-width: $pageWidth;
+    margin: 0 auto;
+    padding: 5px $base-padding;
+    display: grid;
+    grid-template-columns: 1fr 22% 25%;
+
+    h2 {
+      padding-top: 113px;
+      color: $primaryColor;
+      @include CircularTheme(700, 23px, normal, 29.09px);
+    }
+    p {
+      padding-bottom: 3rem;
+      color: #19352a;
+      margin-top: 8px;
+      width: 60%;
+      @include CircularTheme(500, 13px, normal, 16.44px);
+    }
+    span {
+      @include CircularTheme(500, 18px, normal, 22.77px);
+    }
+    .mobile__link {
+      display: flex;
+      gap: 12px;
+      margin-top: 0.6rem;
+    }
+  }
+  @include desktop {
+    .sub__container {
+      grid-template-columns: 1fr;
+      padding-bottom: 2rem;
+      .mobile__screen {
+        display: none;
+      }
+      span {
+        display: flex;
+        justify-content: center;
+      }
+      .mobile__link {
+        display: flex;
+        justify-content: center;
+      }
+      h2 {
+        padding-top: 3rem;
+      }
+      p {
+        width: 100%;
+      }
+    }
+  }
+  @include phone {
+    .sub__container {
+      padding-left: $mobile-padding;
+      padding-right: $mobile-padding;
+    }
+  }
+}

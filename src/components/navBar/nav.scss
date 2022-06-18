@@ -50,6 +50,14 @@
         font-weight: 700;
         margin-left: 10px;
       }
+      .menu__bar {
+        display:none;
+      }
+      // i {
+        //   padding: 8px;
+        //   font-size: 2rem;
+        //   margin-right: 1rem;
+      // }
     }
     .nav__item div:first-child {
     }
@@ -62,6 +70,28 @@
     .login__link,
     .nav__btn {
       display: none;
+    }
+    .nav__item {
+      // border: 5px solid red;
+      .link__btn {
+        display: none;
+      }
+    }
+    .nav__container {
+      .menu__bar {
+        border: 4px solid red;
+        display: inline-block;
+        div {
+          height: 5px;
+          width: 100px;
+          background-color: black;
+        }
+      }
+
+      // i {
+      //   border: 4px solid red;
+      //   display: inline-block;
+      // }
     }
   }
 }

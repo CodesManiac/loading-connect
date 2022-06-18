@@ -20,6 +20,12 @@
 @include desktop {
   .service__container {
     grid-template-columns: 1fr;
+    .service__text {
+      .find__loan{
+        display: flex;
+        justify-content: center;
+      }
+  }
     .mobile__screen {
       display: none;
     }
