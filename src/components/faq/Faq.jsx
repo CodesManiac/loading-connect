@@ -1,7 +1,7 @@
 import React from "react";
 import ArrowOpen from "../../assets/images/arrowlef.svg";
 import ArrowRight from "../../assets/images/arrowright.svg";
-import Button from "../button/Button";
+import Button from "../linkBtn/Button";
 
 import "./faq.scss";
 const Faq = () => {

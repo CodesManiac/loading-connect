@@ -4,7 +4,7 @@ import Title from "./components/title/Title";
 import LaptopScreen from "../../assets/images/screen.svg";
 import { items } from "../../data";
 import "./services.scss";
-import Button from "../button/Button";
+import Button from "../linkBtn/Button";
 
 
 const Service = () => {

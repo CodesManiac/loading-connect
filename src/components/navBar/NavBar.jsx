@@ -33,7 +33,7 @@ const NavBar = () => {
             </a>
           </div>
           <div>
-            <a className="login__link" href="/" rel="noreferrer">
+            <a className="login__link" href="/login" rel="noreferrer">
               Login
             </a>
             <a className="nav__btn" href="/" rel="noreferrer">

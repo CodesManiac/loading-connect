@@ -4,7 +4,7 @@ import Footer from "./footer/Footer";
 import Service from "./services/Service";
 import Work from "./works/Work";
 import Header from "./header/Header";
-import Button from "./button/Button";
+import Button from "./linkBtn/Button";
 import DownloadSession from "./downloadScreen/DownloadSession";
 
 export { Faq, NavBar, Footer, Service, Work, Header, Button, DownloadSession };
