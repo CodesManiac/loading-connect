@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "../button/Button";
+import Button from "../linkBtn/Button";
 import "./work.scss";
 
 const Work = ({ dataObject, text }) => {

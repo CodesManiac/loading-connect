@@ -3,7 +3,8 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import Logo from '../../assets/images/signup_logo.png'
-import Button from '../button/Button'
+import { Link } from 'react-router-dom'
+import Button from '../linkBtn/Button'
 import Input from '../input/Input'
 import './right.scss'
 
@@ -30,7 +31,7 @@ const RightSignup = () => {
       <div className='signup-header'>
         <h1>Sign Up</h1>
       </div>
-      <form action='' className='signup-form'>
+      <form className='signup-form'>
       <div className='first-part'>
         <div className='short-input fname-input'>
           <Input type='text' labelName='First Name' id='fname' holder='First Name'/>
@@ -64,15 +65,15 @@ const RightSignup = () => {
       </div>
 
       <div className='before-signup'>
-        <p>By signing up, you agree to the <span>Terms of Service</span> and <span>Privacy Policy</span></p>
+        <p>By signing up, you agree to the <Link to="/terms">Terms of Service</Link> and <Link to="/privacy">Privacy Policy</Link></p>
       </div>
 
       <div className='signup-btn'>
         <Button children='Sign Up' url='/'/>
       </div>
       <div className='after-signup'>
-        <p>Already have an account? <span>Login</span></p>
-        <p>Are you a truck owner? <span>Sign up to deliver</span></p>
+        <p>Already have an account? <Link to="/login">Login</Link></p>
+        <p>Are you a truck owner? <Link to="/signup">Sign up to deliver</Link></p>
       </div>
       </form>
     </div>

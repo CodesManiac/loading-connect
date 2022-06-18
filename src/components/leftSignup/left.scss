@@ -1,0 +1,18 @@
+#user-signup {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-signup-left {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  min-height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.user-signup-left-logo {
+  margin-left: 50px;
+  margin-top: 50px;
+}
