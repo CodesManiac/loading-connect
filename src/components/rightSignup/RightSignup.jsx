@@ -10,18 +10,104 @@ import './right.scss'
 
 const RightSignup = () => {
   const [passwordType, setPasswordType] = useState("password");
-  const [passwordInput, setPasswordInput] = useState("");
+  const [passwordInput, setPasswordInput] = useState('');
+  const [passwordError, setPasswordError] = useState("");
+  const [confirmPasswordError, setConfirmPasswordError] = useState("");
+  
   const handlePasswordChange =(e)=>{
-      setPasswordInput(e.target.value);
-  }
-  const togglePassword =()=>{
-      if(passwordType==="password")
-      {
-      setPasswordType("text")
-      return;
+    const passwordInputValue = e.target.value.trim();
+    // const cpasswordInputValue = e.target.value.trim();
+    const passwordInputId = e.target.name;
+    const newPasswordInput = {...passwordInput, [passwordInputId]:passwordInputValue}
+    setPasswordInput(newPasswordInput);
+  };
+
+  const handleValidation =(e)=>{
+    const passwordInputId = e.target.name
+    
+    if(passwordInputId === 'pword'){
+      const passwordInputValue = e.target.value.trim();
+      const uppercaseRegExp   = /(?=.*?[A-Z])/;
+      const lowercaseRegExp   = /(?=.*?[a-z])/;
+      const digitsRegExp      = /(?=.*?[0-9])/;
+      const specialCharRegExp = /(?=.*?[#?!@$%^&*-])/;
+      const minLengthRegExp   = /.{8,}/;
+
+      const passwordLength =      passwordInputValue.length;
+      const uppercasePassword =   uppercaseRegExp.test(passwordInputValue);
+      const lowercasePassword =   lowercaseRegExp.test(passwordInputValue);
+      const digitsPassword =      digitsRegExp.test(passwordInputValue);
+      const specialCharPassword = specialCharRegExp.test(passwordInputValue);
+      const minLengthPassword =   minLengthRegExp.test(passwordInputValue);
+
+      let errMsg ="";
+      if(passwordLength===0){
+        const msg = document.getElementById("msg");
+        msg.classList.add("invalid");
+        msg.classList.remove("valid");
+        errMsg="Password is empty";
+      }else if(!uppercasePassword){
+        const msg = document.getElementById("msg");
+        msg.classList.add("invalid");
+        msg.classList.remove("valid");
+        errMsg="Password must have a capital letter";
+      }else if(!lowercasePassword){
+        const msg = document.getElementById("msg");
+        msg.classList.add("invalid");
+        msg.classList.remove("valid");
+        errMsg="Password must have a Lowercase";
+      }else if(!digitsPassword){
+        const msg = document.getElementById("msg");
+        msg.classList.add("invalid");
+        msg.classList.remove("valid");
+        errMsg="Password must have a digit";
+      }else if(!specialCharPassword){
+        const msg = document.getElementById("msg");
+        msg.classList.add("invalid");
+        msg.classList.remove("valid");
+        errMsg="Password must have a Special Characters";
+      }else if(!minLengthPassword){
+        const msg = document.getElementById("msg");
+        msg.classList.add("invalid");
+        msg.classList.remove("valid");
+        errMsg="Password must a minumum of 8 characters";
+      }else if(uppercasePassword && lowercasePassword && digitsPassword && specialCharPassword && minLengthPassword){
+        const msg = document.getElementById("msg");
+        msg.classList.add("valid");
+        msg.classList.remove("invalid");
+      }else{
+        errMsg="";
       }
-      setPasswordType("password")
+      setPasswordError(errMsg);
+      }
+
+  
+    if(passwordInputId === 'cpword'){
+      const cpasswordInputValue = e.target.value.trim();
+      const passwordInputValue = document.getElementById('pword').value;
+      if(cpasswordInputValue !== passwordInputValue){
+        const confirmMsg = document.getElementById("confirm-msg");
+        confirmMsg.classList.add("invalid");
+        confirmMsg.classList.remove("valid");
+        setConfirmPasswordError('Password does not match');
+      }
+      else{
+        const confirmMsg = document.getElementById("confirm-msg");
+        confirmMsg.classList.add("valid");
+        confirmMsg.classList.remove("invalid");
+        setConfirmPasswordError('');
+      }
+    }
   }
+
+  const togglePassword =()=>{
+    if(passwordType==="password")
+    {
+    setPasswordType("text")
+    return;
+    }
+    setPasswordType("password")
+  };
 
   return (
     <div className='user-signup-right'>
@@ -50,14 +136,18 @@ const RightSignup = () => {
         <Input type='email' labelName='Email' id='email' holder='Email'/>
       </div>
 
-      <div className='long-input'>
-        <Input type={passwordType} labelName='Password' id='pword' holder='Password' value={passwordInput} onChange={handlePasswordChange} />
-        <div className='eye-icon' onClick={togglePassword}>
-          {passwordType==="password"?<FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}
+      <p id='msg' errormsg={passwordError}></p>
+      <div>
+        <div className='long-input' onKeyUp={handleValidation}>
+          <Input type={passwordType} labelName='Password' id='pword' holder='Password' value={passwordInput} onChange={handlePasswordChange} />
+          <div className='eye-icon' onClick={togglePassword}>
+            {passwordType==="password"?<FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}
+          </div>
         </div>
       </div>
-          
-      <div className='long-input'>
+        
+      <p id='confirm-msg' errormsg={confirmPasswordError} ></p>
+      <div className='long-input' onKeyUp={handleValidation}>
         <Input type={passwordType} labelName='Re-enter Password' id='cpword' holder='Re-enter Password' value={passwordInput} onChange={handlePasswordChange} />
         <div className='eye-icon' onClick={togglePassword}>
           {passwordType==="password"?<FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}
@@ -72,12 +162,14 @@ const RightSignup = () => {
         <Button children='Sign Up' url='/'/>
       </div>
       <div className='after-signup'>
-        <div>You do not have an account? <Link to="/signup">Sign up</Link></div>
+        <div>
+          Already have an account? <Link to="/login">Login</Link>
+        </div>
         <div>Are you a truck owner?<Link to="/login">Login to deliver</Link></div>
       </div>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default RightSignup

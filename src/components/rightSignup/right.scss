@@ -104,6 +104,42 @@ input[type="number"] {
   line-height: 24px;
 }
 
+/* Add a green text color and an "tick" when the requirements are right */
+.valid{
+  color: green;
+}
+.valid:before {
+  position: relative;
+  color: green;
+  top: 40px;
+  left: -20px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+
+.invalid:before {
+  position: relative;
+  color: red;
+  top: 60px;
+  left: -25px;
+  content: "✖";
+}
+
+.invalid:after {
+  position: relative;
+  border: 2px solid red;
+  background-color: red;
+  color: white;
+  top: 35px;
+  left: -260px;
+  padding: 3px 2px;
+  font-size: 14px;
+  border-radius: 5px;
+  content: attr(errormsg);
+  z-index: 1;
+}
+
 @include phone {
   .signup-header {
     text-align: center;
