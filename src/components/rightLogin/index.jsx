@@ -66,10 +66,10 @@ const LogiForm = () => {
         </div>
         <div className="after-signup">
           <div>
-            Already have an account? <Link to="/login">Login</Link>
+            You do not have an account? <Link to="/signup">Sign up</Link>
           </div>
           <div>
-            Are you a truck owner? <Link to="/signup">Login to deliver</Link>
+            Are you a new truck owner? <Link to="/signup">Sign up to deliver</Link>
           </div>
         </div>
       </form>
