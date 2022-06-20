@@ -118,6 +118,13 @@ input[type="number"] {
 
 /* Add a red text color and an "x" when the requirements are wrong */
 
+.input-container{
+position: relative;
+}
+.error{
+  position: absolute;
+  left: 0;
+}
 .invalid:before {
   position: relative;
   color: red;
@@ -126,18 +133,38 @@ input[type="number"] {
   content: "✖";
 }
 
-.invalid:after {
+.invalid:after{
   position: relative;
+  top: 35px;
   border: 2px solid red;
   background-color: red;
   color: white;
-  top: 35px;
-  left: -260px;
+  text-align: right;
   padding: 3px 2px;
   font-size: 14px;
   border-radius: 5px;
   content: attr(errormsg);
   z-index: 1;
+}
+
+.invalid:after {
+  left: -260px;
+}
+.invalid-empty:after {
+  left: -220px;
+}
+.invalid-lower:after {
+  left: -248px;
+}
+.invalid-digit:after {
+
+  left: -205px;
+}
+.invalid-special:after {
+  left: -299px;
+}
+.invalid-char:after {
+  left: -308px;
 }
 
 @include phone {

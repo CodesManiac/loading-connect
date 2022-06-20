@@ -9,7 +9,8 @@ import Input from '../input/Input'
 import './right.scss'
 
 const RightSignup = () => {
-  const [passwordType, setPasswordType] = useState("password");
+  const [showPassword, setShowPassword] = useState(false);
+  const [showPasswordCon, setShowPasswordCon] = useState(false);
   const [passwordInput, setPasswordInput] = useState('');
   const [passwordError, setPasswordError] = useState("");
   const [confirmPasswordError, setConfirmPasswordError] = useState("");
@@ -41,40 +42,41 @@ const RightSignup = () => {
       const minLengthPassword =   minLengthRegExp.test(passwordInputValue);
 
       let errMsg ="";
+      const msg = document.getElementById("msg");
+      msg.classList.remove("invalid-empty");
+      msg.classList.remove("invalid-lower");
+      msg.classList.remove("invalid-digit");
+      msg.classList.remove("invalid-special");
+      msg.classList.remove("invalid-char");
+      msg.classList.remove("invalid");
+      msg.classList.remove("valid");
+      
       if(passwordLength===0){
-        const msg = document.getElementById("msg");
         msg.classList.add("invalid");
-        msg.classList.remove("valid");
-        errMsg="Password is empty";
+        msg.classList.add("invalid-empty");
+        errMsg="Password must not be empty";
       }else if(!uppercasePassword){
-        const msg = document.getElementById("msg");
         msg.classList.add("invalid");
-        msg.classList.remove("valid");
+        msg.classList.add("invalid");
         errMsg="Password must have a capital letter";
       }else if(!lowercasePassword){
-        const msg = document.getElementById("msg");
         msg.classList.add("invalid");
-        msg.classList.remove("valid");
+        msg.classList.add("invalid-lower");
         errMsg="Password must have a Lowercase";
       }else if(!digitsPassword){
-        const msg = document.getElementById("msg");
         msg.classList.add("invalid");
-        msg.classList.remove("valid");
+        msg.classList.add("invalid-digit");
         errMsg="Password must have a digit";
       }else if(!specialCharPassword){
-        const msg = document.getElementById("msg");
         msg.classList.add("invalid");
-        msg.classList.remove("valid");
-        errMsg="Password must have a Special Characters";
+        msg.classList.add("invalid-special");
+        errMsg="Password must have a special character";
       }else if(!minLengthPassword){
-        const msg = document.getElementById("msg");
         msg.classList.add("invalid");
-        msg.classList.remove("valid");
-        errMsg="Password must a minumum of 8 characters";
+        msg.classList.add("invalid-char");
+        errMsg="Password must have a minumum of 8 characters";
       }else if(uppercasePassword && lowercasePassword && digitsPassword && specialCharPassword && minLengthPassword){
-        const msg = document.getElementById("msg");
         msg.classList.add("valid");
-        msg.classList.remove("invalid");
       }else{
         errMsg="";
       }
@@ -100,14 +102,6 @@ const RightSignup = () => {
     }
   }
 
-  const togglePassword =()=>{
-    if(passwordType==="password")
-    {
-    setPasswordType("text")
-    return;
-    }
-    setPasswordType("password")
-  };
 
   return (
     <div className='user-signup-right'>
@@ -137,20 +131,27 @@ const RightSignup = () => {
       </div>
 
       <p id='msg' errormsg={passwordError}></p>
-      <div>
+      <div className='flex input-control' >
+      {/* <div  className='error' >
+        <div className="error-text">
+    Password short
+        </div>
+        <div className="error cancel">X</div>
+      </div> */}
         <div className='long-input' onKeyUp={handleValidation}>
-          <Input type={passwordType} labelName='Password' id='pword' holder='Password' value={passwordInput} onChange={handlePasswordChange} />
-          <div className='eye-icon' onClick={togglePassword}>
-            {passwordType==="password"?<FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}
+          
+          <Input type={showPassword?"text":"password"} labelName='Password' id='pword' holder='Password' value={passwordInput} onChange={handlePasswordChange} />
+          <div className='eye-icon' onClick={()=>setShowPassword(!showPassword)}>
+            {!showPassword?<FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}
           </div>
         </div>
       </div>
         
       <p id='confirm-msg' errormsg={confirmPasswordError} ></p>
       <div className='long-input' onKeyUp={handleValidation}>
-        <Input type={passwordType} labelName='Re-enter Password' id='cpword' holder='Re-enter Password' value={passwordInput} onChange={handlePasswordChange} />
-        <div className='eye-icon' onClick={togglePassword}>
-          {passwordType==="password"?<FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}
+        <Input type={showPasswordCon?"text":"password"} labelName='Re-enter Password' id='cpword' holder='Re-enter Password' value={passwordInput} onChange={handlePasswordChange} />
+        <div className='eye-icon' onClick={()=>setShowPasswordCon(!showPasswordCon)}>
+        {!showPasswordCon?<FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}
         </div>
       </div>
 
