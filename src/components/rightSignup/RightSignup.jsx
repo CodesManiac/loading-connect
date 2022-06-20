@@ -9,7 +9,6 @@ import Input from '../input/Input'
 import './right.scss'
 
 const RightSignup = () => {
-  const [passwordType, setPasswordType] = useState("password");
   const [showPassword, setShowPassword] = useState(false);
   const [showPasswordCon, setShowPasswordCon] = useState(false);
   const [passwordInput, setPasswordInput] = useState('');
@@ -103,14 +102,6 @@ const RightSignup = () => {
     }
   }
 
-  const togglePassword =()=>{
-    if(passwordType==="password")
-    {
-    setPasswordType("text")
-    return;
-    }
-    setPasswordType("password")
-  };
 
   return (
     <div className='user-signup-right'>
