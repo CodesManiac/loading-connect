@@ -5,6 +5,7 @@
 .user-signup-right {
   width: 50%;
   align-self: center;
+  margin: 0 3em;
 }
 
 .signup-logo {
@@ -21,7 +22,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // align-items: center;
   width: 90%;
 }
 
@@ -40,18 +40,6 @@
   margin: 0 0.5em 0 0;
 }
 
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
 .long-input {
   display: flex;
   position: relative;
@@ -67,18 +55,6 @@ input[type="number"] {
   cursor: pointer;
 }
 
-.signup-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.signup-btn a {
-  text-align: center;
-  width: 100%;
-}
-
 .before-signup p {
   text-align: center;
   color: $lightBlackColor;
@@ -88,43 +64,36 @@ input[type="number"] {
 }
 
 .before-signup a,
-.after-signup a {
+.after-signup a, .after-login a {
   color: $primaryColor;
   font-weight: 700;
 }
 
 .after-signup {
   color: $darkColor;
-  position: absolute;
-  bottom: 30px;
-  right: 300px;
   font-weight: 500;
-  text-align: center;
-  margin-top: 1em;
-  line-height: 24px;
+  margin-top: 1.5em;
+  line-height: 28px;
+}
+
+.after-login {
+  color: $darkColor;
+  position: absolute;
+  bottom: 50px;
+  font-weight: 500;
+  line-height: 30px;
 }
 
 /* Add a green text color and an "tick" when the requirements are right */
-.valid{
-  color: green;
-}
 .valid:before {
   position: relative;
   color: green;
-  top: 40px;
-  left: -20px;
+  top: 50px;
+  left: -25px;
   content: "✔";
 }
 
 /* Add a red text color and an "x" when the requirements are wrong */
-
-.input-container{
-position: relative;
-}
-.error{
-  position: absolute;
-  left: 0;
-}
 .invalid:before {
   position: relative;
   color: red;
@@ -148,23 +117,26 @@ position: relative;
 }
 
 .invalid:after {
-  left: -260px;
+  left: -245px;
 }
 .invalid-empty:after {
-  left: -220px;
+  left: -210px;
 }
 .invalid-lower:after {
   left: -248px;
 }
 .invalid-digit:after {
 
-  left: -205px;
+  left: -197px;
 }
 .invalid-special:after {
-  left: -299px;
+  left: -273px;
 }
 .invalid-char:after {
-  left: -308px;
+  left: -326px;
+}
+.invalid-confirm:after {
+  left: -187px;
 }
 
 @include phone {
@@ -191,15 +163,6 @@ position: relative;
   .fname-input {
     margin: 0 0 1em 0;
   }
-  .after-signup {
-    color: $darkColor;
-    position: relative;
-    bottom: 0px;
-    font-weight: 500;
-    text-align: center;
-    margin-top: 1em;
-    line-height: 24px;
-  }
 }
 
 @include tablet {
@@ -215,4 +178,47 @@ position: relative;
     display: block;
     margin: 3em 0 0 1.8em;
   }
+
+  
+/* Add a green text color and an "tick" when the requirements are right */
+.valid:before {
+  position: relative;
+  color: green;
+  top: 50px;
+  left: -25px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid:before {
+  top: 50px;
+  left: -19px;
+}
+
+.invalid:after{
+  top: -10px;
+}
+
+.invalid:after {
+  left: -10px;
+}
+.invalid-empty:after {
+  left: -10px;
+}
+.invalid-lower:after {
+  left: -10px;
+}
+.invalid-digit:after {
+
+  left: -10px;
+}
+.invalid-special:after {
+  left: -10px;
+}
+.invalid-char:after {
+  left: -10px;
+}
+.invalid-confirm:after {
+  left: -10px;
+}
 }

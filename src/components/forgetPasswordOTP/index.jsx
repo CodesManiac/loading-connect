@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import Logo from "../../assets/images/signup_logo.png";
 import Button from "../button";
 import Input from "../input/Input";
@@ -28,9 +27,9 @@ const RightSignup = () => {
         </Link>
 
         <div className="mt-5 forgot-btn">
-          <Button text="Continue" width="100%" />
+          <Button text="Continue" width="80%" />
         </div>
-        <div className="after-signup">
+        <div className="after-login">
           <p>
             Remembered your password? <Link to="/login">Login</Link>
           </p>

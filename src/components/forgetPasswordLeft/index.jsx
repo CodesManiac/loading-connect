@@ -17,7 +17,7 @@ const RightSignup = () => {
         <h1>Forgot Password?</h1>
       </div>
       <div className="mb-8 -mt-3">
-        Enter your email or phone number to behin password recovery
+        Enter your email or phone number to begin password recovery
       </div>
       <form className="signup-form">
         <div className="long-input">
@@ -30,9 +30,9 @@ const RightSignup = () => {
         </div>
 
         <div className="mt-5 forgot-btn">
-          <Button text="Continue" width="100%" />
+          <Button text="Continue" width="80%" />
         </div>
-        <div className="after-signup">
+        <div className="after-login">
           <p>
             Remembered your password? <Link to="/login">Login</Link>
           </p>

@@ -1,8 +1,10 @@
-import React,{useState} from 'react'
+import React, {useState} from 'react'
 import './input.scss'
 
 const Input = ({labelName, id, holder, type}) => {
+
   const [showLabel, setShowLabel] = useState(false)
+
   return (
     <div className='input-container'>
      {showLabel&& <label className='label-field' >{labelName}</label>}
