@@ -1,14 +1,14 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import Logo from '../../assets/images/signup_logo.png'
 import { Link } from 'react-router-dom'
 import Button from '../button/index'
 import Input from '../input/Input'
-import './right.scss'
 
-const RightSignup = () => {
+const RightDriverSignup = () => {
+
   const [showPassword, setShowPassword] = useState(false);
   const [showPasswordCon, setShowPasswordCon] = useState(false);
   const [passwordInput, setPasswordInput] = useState('');
@@ -114,14 +114,12 @@ const RightSignup = () => {
         <h1>Sign Up</h1>
       </div>
       <form className='signup-form'>
-      <div className='first-part'>
-        <div className='short-input fname-input'>
-          <Input type='text' labelName='First Name' id='fname' holder='First Name'/>
-        </div>
-            
-        <div className='short-input'>
-          <Input type='text' labelName='Last Name' id='lname' holder='Last Name' />
-        </div>
+      <div className='long-input'>
+        <Input type='text' labelName='Business Name' id='Bname' holder='Business Name'/>
+      </div>
+
+      <div className='long-input'>
+        <Input type='text' labelName='CAC Number (optional)' id='email' holder='CAC Number (optional)'/>
       </div>
 
       <div className='long-input'>
@@ -129,7 +127,7 @@ const RightSignup = () => {
       </div>
 
       <div className='long-input'>
-        <Input type='email' labelName='Email' id='email' holder='Email'/>
+        <Input type='email' labelName='Business Email' id='email' holder='Business Email'/>
       </div>
 
       <p id='msg' errormsg={passwordError}></p>
@@ -162,11 +160,11 @@ const RightSignup = () => {
         <div>
           Already have an account? <Link to="/login">Login</Link>
         </div>
-        <div>Are you a truck owner?<Link to="/driverlogin"> Login to deliver</Link></div>
+        <div>You want to send a package?<Link to="/signup"> Sign up to send a package</Link></div>
       </div>
       </form>
     </div>
   );
 };
 
-export default RightSignup
+export default RightDriverSignup;

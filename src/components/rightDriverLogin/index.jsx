@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import Button from "../button/index";
 import Input from "../input/Input";
 
-const LogiForm = () => {
+const RightDriverLogin = () => {
 
   const [showPassword, setShowPassword] = useState(false);
   const [passwordInput, setPasswordInput] = useState('');
@@ -56,10 +56,10 @@ const LogiForm = () => {
         </div>
         <div className="after-login">
           <div>
-            You do not have an account? <Link to="/signup">Sign up</Link>
+            You have a truck but not an account? <Link to="/driversignup">Sign up</Link>
           </div>
           <div>
-            Are you a new truck owner? <Link to="/driversignup">Sign up to deliver</Link>
+            You want to send a package? <Link to="/login">Login to send a package</Link>
           </div>
         </div>
       </form>
@@ -67,4 +67,4 @@ const LogiForm = () => {
   );
 };
 
-export default LogiForm;
+export default RightDriverLogin;
