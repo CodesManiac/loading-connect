@@ -6,11 +6,9 @@ import Deliver from "./assets/images/delivery.svg";
 import Meter from "./assets/images/decrease.svg";
 import Shield from "./assets/images/shield.svg";
 
-
-import Truck from "./assets/images/truck.svg"
-import TruckImg from "./assets/images/truck2.svg"
-import TruckTwoImg from "./assets/images/truck3.svg"
-
+import Truck from "./assets/images/truck.svg";
+import TruckImg from "./assets/images/truck2.svg";
+import TruckTwoImg from "./assets/images/truck3.svg";
 
 const works = [
   {
@@ -84,6 +82,32 @@ const items = [
   },
 ];
 
+const question = [
+  {
+    title: "What is your first memory?",
+    description:
+      "Lectus sed mattis ut turpis integer auctor ut commodo, nulla. Feli augue vulputate ornare praesent nunc scelerisque. Quam vitae vitae facilisis lacus, pulvinar gravida ultricies tempor, adipiscing Vivamus ornare purus non nibh facilisis amet maecenas. Nunc erat pretium lobortis.",
+  },
+  {
+    title: "Do you like flying?",
+    description:
+      "Lectus sed mattis ut turpis integer auctor ut commodo, nulla. Feli augue vulputate ornare praesent nunc scelerisque. Quam vitae vitae facilisis lacus, pulvinar gravida ultricies tempor, adipiscing Vivamus ornare purus non nibh facilisis amet maecenas. Nunc erat pretium lobortis.",
+  },
+  {
+    title: "Which do you like better, black socks or white socks?",
+    description:
+      "Lectus sed mattis ut turpis integer auctor ut commodo, nulla. Feli augue vulputate ornare praesent nunc scelerisque. Quam vitae vitae facilisis lacus, pulvinar gravida ultricies tempor, adipiscing Vivamus ornare purus non nibh facilisis amet maecenas. Nunc erat pretium lobortis.",
+  },
+  {
+    title: "What is your favorite holiday?",
+    description:
+      "Lectus sed mattis ut turpis integer auctor ut commodo, nulla. Feli augue vulputate ornare praesent nunc scelerisque. Quam vitae vitae facilisis lacus, pulvinar gravida ultricies tempor, adipiscing Vivamus ornare purus non nibh facilisis amet maecenas. Nunc erat pretium lobortis.",
+  },
+  {
+    title: "Have you ever changed a diaper?",
+    description:
+      "Lectus sed mattis ut turpis integer auctor ut commodo, nulla. Feli augue vulputate ornare praesent nunc scelerisque. Quam vitae vitae facilisis lacus, pulvinar gravida ultricies tempor, adipiscing Vivamus ornare purus non nibh facilisis amet maecenas. Nunc erat pretium lobortis.",
+  },
+];
 
-
-export { works, items, truck, services };
+export { works, items, truck, services, question };
