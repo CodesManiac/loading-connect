@@ -1,0 +1,31 @@
+@import "../../defaultStyles/Colors.scss";
+@import "../../defaultStyles/Typography.scss";
+@import "../../defaultStyles/MediaQueries.scss";
+
+.dashboardlayout {
+  height: 100vh;
+  overflow: scroll;
+
+  .dashboard-nav {
+    background-color: $secondaryColor;
+    color: $lightBlackColor !important;
+  }
+
+  .notification {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    right: 0;
+    top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #8ddca4;
+    backdrop-filter: blur(50px);
+    border-radius: 10px 0px 0px 10px;
+  }
+  main{
+    height: 93.5vh;
+  }
+}

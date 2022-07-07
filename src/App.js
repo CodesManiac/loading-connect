@@ -8,6 +8,7 @@ import ForgetPassword from "./pages/auth/forgotPassword";
 import Pricing from "./pages/pricing/Pricing";
 import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy";
 import TermOfService from "./pages/termOfService/TermOfService";
+import Dashboard from "./pages/app/Dashboard";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermOfService />} />
+        <Route path="/app/dashboard" element={<Dashboard/>} />
         <Route path="/forget-password" element={<ForgetPassword />} />
       </Routes>
     </Router>
