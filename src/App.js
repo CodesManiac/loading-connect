@@ -9,6 +9,9 @@ import Pricing from "./pages/pricing/Pricing";
 import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy";
 import TermOfService from "./pages/termOfService/TermOfService";
 import Dashboard from "./pages/app/Dashboard";
+import DriverSignup from "./pages/auth/DriverSignup";
+import DriverLogin from "./pages/auth/DriverLogin";
+
 
 function App() {
   return (
@@ -16,6 +19,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/driversignup" element={<DriverSignup />} />
+        <Route path="/driverlogin" element={<DriverLogin />} />
         <Route path="/login" element={<Login />} />
         <Route path="/otp" element={<OTP />} />
         <Route path="/reset" element={<Reset />} />
