@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import Logo from "../../assets/images/Logo.svg";
 
 const Navbar = ({ page = "Dashboard" }) => {

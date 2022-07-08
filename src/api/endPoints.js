@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:8080";
+const baseURL = "https://app.loadconnectng.com/api/v1";
 
 const endPoints = {
   register: `${baseURL}/auth/register`,

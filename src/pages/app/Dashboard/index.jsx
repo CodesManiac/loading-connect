@@ -7,16 +7,9 @@ const Dashboard = () => {
   return (
     <DashboardLayout>
       <div className="dashboard">
-        <div className="dashboard-left">
-          left
-        </div>
-        <div className="dashboard-middle">
-
-        </div>
-        <div className="dashboard-right">
-
-        </div>
-
+        <div className="dashboard-left">left</div>
+        <div className="dashboard-middle">midle</div>
+        <div className="dashboard-right">right</div>
       </div>
     </DashboardLayout>
   );
