@@ -13,10 +13,10 @@ const NavBar = () => {
               {" "}
               <img src={Logo} alt="" />
             </a>
-            <Link className="link__btn" to="/howitwork">
+            <a className="link__btn" href="/#how-it-work">
               How it Works
-            </Link>
-            <a className="link__btn" href="/" rel="noreferrer">
+            </a>
+            <a className="link__btn" href="/#download" rel="noreferrer">
               Download
             </a>
             <Link className="link__btn" to="/about">
@@ -25,10 +25,10 @@ const NavBar = () => {
             <Link className="link__btn" to="/pricing">
               Pricing
             </Link>
-            <a className="link__btn" href="/" rel="noreferrer">
+            <a className="link__btn" href="/#faq" rel="noreferrer">
               FAQ
             </a>
-            <a className="truck__owner" href="/" rel="noreferrer">
+            <a className="truck__owner" href="/howitwork" rel="noreferrer">
               For Truck Owner
             </a>
           </div>

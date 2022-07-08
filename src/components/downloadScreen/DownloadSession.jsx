@@ -6,7 +6,7 @@ import "./download.scss";
 
 const DownloadSession = ({ url, Img }) => {
   return (
-    <div className="download__container">
+    <div className="download__container" id="download">
       <div className="sub__container">
         <div>
           <h2>Find, Pick up and delivery quicker</h2>

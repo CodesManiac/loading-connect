@@ -17,14 +17,14 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HowItWork />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/driversignup" element={<DriverSignup />} />
         <Route path="/driverlogin" element={<DriverLogin />} />
         <Route path="/login" element={<Login />} />
         <Route path="/otp" element={<OTP />} />
         <Route path="/reset" element={<Reset />} />
-        <Route path="/howitwork" element={<HowItWork />} />
+        <Route path="/howitwork" element={<Home  />} />
         <Route path="/about" element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />

@@ -12,7 +12,7 @@ const HowItWork = () => {
         <NavBar/>
         <HeroPage/>
         <ServiceSession />
-        <Work dataObject={truck} text="Create Loan"/>
+        <Work dataObject={truck} text="Create Load" url="/login"/>
         <DownloadSession url={TopScreen} Img={BottomScreen}/>
         <Faq/>
         <Footer/>

@@ -22,7 +22,7 @@ const Footer = () => {
             <p className="load__connect">Load Connect</p>
             <span className="nigeria">NIGERIA</span>
             <div className="copy__right">
-              <p>Copyright © 2021 Load Connect</p>
+              <p> © 2021 Load Connect</p>
               <p>All rights reserved</p>
             </div>
           </div>
@@ -37,7 +37,7 @@ const Footer = () => {
           <h2>Quick Links</h2>
           <div>
             <div className="vector">
-              <a href="/" rel="noreferrer">
+              <a href="/login" rel="noreferrer">
                 Send A Package
               </a>
               <span className="arrow">
@@ -45,7 +45,7 @@ const Footer = () => {
               </span>
             </div>
             <div style={{ gap: "1.7rem" }} className="vector">
-              <a href="/" rel="noreferrer">
+              <a href="/driverlogin" rel="noreferrer">
                 For Truck Owners
               </a>
               <span className="arrow">
@@ -53,31 +53,31 @@ const Footer = () => {
               </span>
             </div>
           </div>
-          <a className="footer__links" href="/" rel="noreferrer">
+          <a className="footer__links" href="/#how-it-work" rel="noreferrer">
             How it Works
           </a>
-          <a href="/" rel="noreferrer">
+          <a href="/#download" rel="noreferrer">
             Download
           </a>
-          <a className="footer__links" href="/" rel="noreferrer">
+          <a className="footer__links" href="/pricing" rel="noreferrer">
             Pricing
           </a>
         </div>
         <div className="support__footer">
           <h2>Support</h2>
-          <a className="footer__links" href="/" rel="noreferrer">
+          <a className="footer__links" href="/about" rel="noreferrer">
             About
           </a>
-          <a className="footer__links" href="/" rel="noreferrer">
+          <a className="footer__links" href="/#faq" rel="noreferrer">
             Frequently asked questions
           </a>
           <a className="footer__links" href="/" rel="noreferrer">
             Contact support
           </a>
-          <a className="footer__links" href="/" rel="noreferrer">
+          <a className="footer__links" href="/privacy" rel="noreferrer">
             Privacy policy
           </a>
-          <a className="footer__links" href="/" rel="noreferrer">
+          <a className="footer__links" href="/terms" rel="noreferrer">
             Terms of Service
           </a>
         </div>

@@ -17,7 +17,7 @@ function HeroPage() {
           brokers and truck drivers and shippers in Nigeria.
         </p>
         <div className="btn__link">
-          <a className="btn" href="/" rel="noreferrer">
+          <a className="btn" href="/login" rel="noreferrer">
             Create Loads
           </a>
           <a className="btn__learn" href="/" rel="noreferrer">
