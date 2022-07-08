@@ -10,7 +10,7 @@ const Home = () => {
       <NavBar />
       <Header />
       <Service />
-      <Work dataObject={works} text="Find Loans"/>
+      <Work dataObject={works} text="Find Loads" url="/driverlogin"/>
       <DownloadSession url={TopScreen} Img={BottomScreen} />
       <Faq/>
       <Footer/>

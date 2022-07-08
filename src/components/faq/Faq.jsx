@@ -8,7 +8,7 @@ import Question from "./Question";
 const Faq = () => {
   const [data] = useState(question);
   return (
-    <div className="faq__container">
+    <div className="faq__container" id="faq">
       <h2>Frequently Asked Questions</h2>{" "}
       <div className="sub__container">
         <div>
@@ -25,7 +25,7 @@ const Faq = () => {
             questions you might have
           </p>
           <div className="find__loan" style={{ marginTop: "2rem" }}>
-            <Button url="/">Find Loans</Button>
+            <Button url="/driverlogin">Find Loads</Button>
           </div>
         </div>
       </div>

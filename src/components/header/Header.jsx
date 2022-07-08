@@ -17,7 +17,7 @@ const Header = () => {
           matching services to find loads and move truck freight.
         </p>
         <div className="btn__link">
-          <a className="btn" href="/" rel="noreferrer">
+          <a className="btn" href="/driverlogin" rel="noreferrer">
             Find Loads
           </a>
           <a className="btn__learn" href="/" rel="noreferrer">

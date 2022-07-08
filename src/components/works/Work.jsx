@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Button from "../linkBtn/Button";
 import "./work.scss";
 
-const Work = ({ dataObject, text }) => {
+const Work = ({ dataObject, text, url="/" }) => {
   const [data] = useState(dataObject);
   return (
-    <div className="work__container">
+    <div className="work__container" id="how-it-work">
       <h1>How It works</h1>
       <p>Send packages in 3 simple steps</p>
       <div className="work__layout">
@@ -18,7 +18,7 @@ const Work = ({ dataObject, text }) => {
         ))}
       </div>
       <div className="work__btn">
-        <Button url="/">{text}</Button>
+        <Button url={url}>{text}</Button>
       </div>
     </div>
   );
