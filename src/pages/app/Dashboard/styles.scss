@@ -1,23 +1,54 @@
-@import "../../../defaultStyles/Colors.scss";
-@import "../../../defaultStyles/Typography.scss";
-@import "../../../defaultStyles/MediaQueries.scss";
+@import '../../../defaultStyles/Colors.scss';
+@import '../../../defaultStyles/Typography.scss';
+@import '../../../defaultStyles/MediaQueries.scss';
 
 .dashboard {
   display: flex;
   height: 100%;
-  &-left{
+  &-left {
     width: 25%;
     // background-color: khaki;
     height: 100%;
     padding: 20px;
     border-right: 1px solid #908d8d;
+    .left_card {
+      background-color: #fff9e6;
+      @include CircularTheme(400, 14px, normal, 17.71px);
+    }
+    .right_card {
+      background-color: $grayColor;
+      @include CircularTheme(400, 14px, normal, 17.71px);
+      .rr {
+        margin-bottom: 20px;
+      }
+    }
+    hr {
+      opacity: 0.5;
+    }
+    .heading {
+      @include CircularTheme(400, 12px, normal, 15.18px);
+      color: #808080;
+    }
+    .card {
+      background-color: $grayColor;
+      .identifier {
+        @include CircularTheme(400, 10px, normal, 12.65px);
+        color: #808080;
+      }
+      .location {
+        @include CircularTheme(400, 10px, normal, 15.18px);
+      }
+      .buttons {
+        background-color: $lightGray;
+      }
+    }
   }
-  &-middle{
+  &-middle {
     padding: 20px;
     width: 25%;
     // background-color: deeppink;
   }
-  &-right{
+  &-right {
     width: 50%;
     // background-color: aqua;
   }
