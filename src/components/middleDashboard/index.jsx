@@ -1,50 +1,49 @@
 import React from 'react'
-import './middle.scss'
 import Truck from '../../assets/images/truckWidget.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import Tel from '../../assets/images/tel-icon.png'
-import Bar from '../../assets/images/bars.png'
-import Filter from '../../assets/images/filter.png'
+import Message from '../../assets/icons/message.svg'
+import Plus from '../../assets/icons/add.svg'
+import Call from '../../assets/icons/call.svg'
 
-const index = ({box}) => {
+const index = ({card}) => {
     let details;
 
-  switch (box) {
+  switch (card) {
     case 1:
       details = {
         img: <Truck />,
-        title: "Mercedes benz actros"
-        // model: 'SSD-283NV',
-        // type: 'Mini Truck',
-        // capacity: 'Full Truck Load',
-        // dist: '23',
-        // weight: '523.2',
-        // seller: 'John Doe',
-        // msg: 'www.google.com',
-        // tel: '08134561232'
+        title: "Mercedes benz actros",
+        model: 'SSD-283NV',
+        type: 'Mini Truck',
+        capacity: 'Full Truck Load',
+        dist: '23',
+        weight: '523.2',
+        seller: 'John Doe'
       };
       break;
 
     case 2:
       details = {
-        // icon: <CameraVideo />,
-        title: "Videos",
+        img: <Truck />,
+        title: "Mercedes benz actros",
+        model: 'SSD-283NV',
+        type: 'Mini Truck',
+        capacity: 'Full Truck Load',
+        dist: '23',
+        weight: '523.2',
+        seller: 'John Doe'
       };
       break;
 
     case 3:
       details = {
-        // icon: <Receipt />,
-        title: "Orders",
-      };
-      break;
-
-    case 4:
-      details = {
-        // icon: <Bag />,
-        title: "Purchases",
+        img: <Truck />,
+        title: "Mercedes benz actros",
+        model: 'SSD-283NV',
+        type: 'Mini Truck',
+        capacity: 'Full Truck Load',
+        dist: '23',
+        weight: '523.2',
+        seller: 'John Doe'
       };
       break;
 
@@ -54,62 +53,50 @@ const index = ({box}) => {
 
   return (
     <div>
-      <div className='flex justify-between p-3' >
-        <div>
-          <p>Find Trucks</p>
-        </div>
-        <div className='flex'>
-          <img src={Bar} alt='Order icon' className='mr-6'></img>
-          <img src={Filter} alt='filter'></img>
-        </div>
-      </div>
-      <hr />
-      <div className="widget-container bg-gray p-3">
+      <div className="rounded-xl bg-gray p-4 mb-5">
         <div className='flex justify-between text-left' >
             <div>
-                <p>Mercedes benz actors</p>
-                <p>Truck<span> SSD-283NV</span></p>
-                {/* <p>{details.icon}</p> */}
-                {/* <p>{details.title}</p> */}
+                <p className='font-bold text-darkBlack' >{details.title}</p>
+                <p className='font-medium'>Truck<span className='font-light'> | {details.model}</span></p>
             </div>
             <div>
                 <img src={Truck} alt='truck'></img>
             </div>
         </div>
-        <div className='flex justify-between mt-3 text-left' >
-            <div>
-                <p>Truck</p>
-                <p>Mini Truck</p>
+        <div className='flex mt-1.5 gap-48 text-left' >
+            <div >
+                <p className='font-light' >Truck</p>
+                <p className='font-medium'>{details.type}</p>
             </div>
             <div>
-                <p>Capacity</p>
-                <p>Full Truck Load</p>
+                <p className='font-light'>Capacity</p>
+                <p className='font-medium'>{details.capacity}</p>
             </div>
         </div>
-        <div className='flex mt-3 text-left' >
+        <div className='flex mt-1.5 gap-52 text-left' >
             <div>
-                <p>Distance</p>
-                <p>23<span> km</span></p>
+                <p className='font-light'>Distance</p>
+                <p className='font-medium'>{details.dist}<span className='font-light'> km</span></p>
             </div>
-            <div className='ml-48' >
-                <p>Weight</p>
-                <p>523.2<span> kg</span></p>
+            <div>
+                <p className='font-light'>Weight</p>
+                <p className='font-medium'>{details.weight}<span className='font-light'> kg</span></p>
             </div>
         </div>
-        <div className='flex justify-between mt-3 text-left' >
+        <div className='flex justify-between mt-2 pl-1 text-left items-center' >
             <div>
-              <h6>John Doe</h6>
-              <p>&#9734; &#9734; &#9734; &#9734; &#9734;</p>
+              <p className='font-bold'>{details.seller}</p>
+              <p className='text-yellow'>&#9734; &#9734; &#9734; &#9734; &#9734;</p>
             </div>
-            <div className=' flex text-primary' >
-              <div className='m-2 p-3 bg-darkGray rounded-xl text-xl' >
-                <FontAwesomeIcon icon={faEnvelope} />
+            <div className=' flex text-primary gap-4' >
+              <div className='bg-darkGray rounded-lg p-2' >
+                <a href='/app/dashboard'><img src={Message} alt='add'></img></a>
               </div>
-              <div className='m-2 p-3 pt-3 bg-darkGray rounded-xl' >
-                <img src={Tel} alt='telephone' ></img>
+              <div className='bg-darkGray rounded-lg p-2' >
+                <a href='/app/dashboard'><img src={Call} alt='telephone' ></img></a>
               </div>
-              <div className='m-2 p-3 bg-darkGray rounded-xl text-xl'>
-                <FontAwesomeIcon icon={faPlus} />
+              <div className='bg-darkGray rounded-lg p-2'>
+              <a href='/app/dashboard'><img src={Plus} alt='add'></img></a>
               </div>
             </div>
         </div>
