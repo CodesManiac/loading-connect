@@ -1,0 +1,12 @@
+@import "../../defaultStyles/Colors.scss";
+@import "../../defaultStyles/Typography.scss";
+@import "../../defaultStyles/MediaQueries.scss";
+
+
+.btn {
+    background-color: $primaryColor;
+    padding: 21px 5rem;
+    border-radius: 10px;
+    color: $whiteColor;
+    // @include CircularTheme(700, 14px, normal, 17.71px);
+}
