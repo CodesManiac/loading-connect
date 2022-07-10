@@ -1,4 +1,4 @@
-const baseURL = "https://app.loadconnectng.com/api/v1";
+const baseURL = "https://app.loadconnect.ng/api/v1";
 
 const endPoints = {
   register: `${baseURL}/auth/register`,
