@@ -101,7 +101,7 @@ const Navbar = ({ page = "Dashboard" }) => {
               </a>
 
               <a
-                href="/app/dashboard"
+                href="/app/settings"
                 className="  hover:darkBlack hover:text-darkGreen px-3 py-2 rounded-md  font-medium"
               >
                 Settings
