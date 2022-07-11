@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 // import { Link, Navigate } from "react-router-dom";
 
 import Navbar from "./navbar";
 import Bell from "../../assets/icons/notificationsBell.png";
 import "./styles.scss";
+import Notifications from "./notification";
 
 const DashboardLayout = ({ children }) => {
+  const [isNotification, setIsNotification] = useState(false);
   // useEffect(() => {
   //   const auth = window.localStorage.getItem("auth");
   //   if (!auth) {
@@ -13,13 +15,23 @@ const DashboardLayout = ({ children }) => {
   //     // <Navigate to="/" replace={true} />
   //   }
   // }, []);
+
+  const handleNotificationClose = () => {
+    setIsNotification(!isNotification);
+  };
   return (
     <div className="dashboardlayout">
       <Navbar />
-      <div className="notification bg-primary">
+      <div
+        className="notification bg-primary"
+        onClick={handleNotificationClose}
+      >
         <img src={Bell} alt="" />
       </div>
-      <main>{children}</main>
+      <main>
+        {isNotification && <Notifications onClose={handleNotificationClose} />}
+        {children}
+      </main>
     </div>
   );
 };

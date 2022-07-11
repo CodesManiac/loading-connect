@@ -24,8 +24,112 @@
     background: #8ddca4;
     backdrop-filter: blur(50px);
     border-radius: 10px 0px 0px 10px;
+    z-index: 1;
   }
-  main{
-    height: 93.5vh;
+  main {
+    height: 100%;
+    position: relative;
+  }
+  .notification-component {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+    .notification-inner{
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      right: 400px;
+      top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background: #8ddca4;
+      backdrop-filter: blur(50px);
+      border-radius: 10px 0px 0px 10px;
+      z-index: 1;
+    }
+    .container {
+      background-color: $lightSecondaryColor;
+      width: 400px;
+      height: 100%;
+      margin-left: auto;
+      padding: 16px;
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        .title {
+          color: #19352a;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .close {
+          cursor: pointer;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+      hr {
+        opacity: 0.05;
+        border: 1px solid #000000;
+      }
+      .container-wrapper {
+        height: 85%;
+        overflow: scroll;
+        padding-bottom: 100px;
+        .card {
+          background-color: #e8f8ed;
+          margin-top: 20px;
+          min-height: 100px;
+          border-radius: 10px;
+          padding: 10px;
+          display: flex;
+          .icon {
+            width: 69px;
+            // height: 19px;
+            margin-right: 10px;
+            img {
+              object-fit: fill;
+              // height: 100%;
+              width: 100%;
+            }
+          }
+          .content {
+            .title {
+              font-weight: 700;
+              font-size: 16px;
+            }
+            .text {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 18px;
+              color: #333333;
+              opacity: 0.8;
+              margin-top: 5px;
+            }
+            .date {
+              font-weight: 400;
+              font-size: 10px;
+              line-height: 13px;
+              color: #333333;
+              opacity: 0.5;
+              margin-top: 5px;
+            }
+          }
+        }
+        .read-card {
+          background: #f2f2f2;
+          opacity: 0.2;
+        }
+      }
+    }
   }
 }
