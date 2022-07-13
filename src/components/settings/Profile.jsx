@@ -16,7 +16,7 @@ const Profile = () => {
             </label>
             
         </form>
-        <hr className='text-black my-4'/>
+        <hr className='text-hrgray my-4'/>
         <div className='flex flex-col gap-5'>
             <div className='flex flex-wrap md:flex-nowrap gap-6'>
                 <Input type='text' holder='First Name' labelName='First Name' />
