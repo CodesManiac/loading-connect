@@ -10,6 +10,7 @@ import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy";
 import TermOfService from "./pages/termOfService/TermOfService";
 import Dashboard from "./pages/app/Dashboard";
 import Settings from "./pages/app/Settings";
+import Messages from "./pages/app/Messages";
 import DriverSignup from "./pages/auth/DriverSignup";
 import DriverLogin from "./pages/auth/DriverLogin";
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/terms" element={<TermOfService />} />
         <Route path="/app/dashboard" element={<Dashboard/>} />
         <Route path="/app/settings" element={<Settings/>} />
+        <Route path="/app/messages" element={<Messages/>} />
         <Route path="/forget-password" element={<ForgetPassword />} />
       </Routes>
     </Router>
