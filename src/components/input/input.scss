@@ -5,6 +5,7 @@
 .input-container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     background: $grayColor; 
     box-sizing: border-box;
     border-radius: 10px;
@@ -13,10 +14,24 @@
     width: 100%;
     @include CircularTheme(500, 12px, normal, 12px);
 }
+.select-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $grayColor; 
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 67px;
+    padding: 0.4em 0.6em 0;
+    width: 100%;
+}
 
 .label-field{
     color: $lightBlackColor;
     padding-bottom: 3px;
+}
+.select-label-field{
+    color: $lightBlackColor;
 }
 
 .input-field{
@@ -24,6 +39,12 @@
     border-radius: 10px;
     border: none;
     font-size: 24px;
+}
+.select-input-field{
+    background: $grayColor;
+    border-radius: 10px;
+    border: none;
+    outline: none;
 }
 
 .input-field::placeholder{
