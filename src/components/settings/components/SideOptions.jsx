@@ -3,7 +3,7 @@ import arrow from '../../../assets/icons/next-arrow.svg'
 
 const SideOptions = ({image, alt, child}) => {
   return (
-    <div className='flex justify-start py-4 px-7 hover:bg-orange'>
+    <div className='flex justify-start py-4 px-7 active:bg-orange'>
         <div className='w-14'>
             <img src={image} alt={alt}></img>
         </div>

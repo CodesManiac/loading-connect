@@ -7,11 +7,11 @@ import "./styles.scss";
 const Dashboard = () => {
   return (
     <DashboardLayout>
-     <div className="dashboard">
-        <div className="dashboard-left">
+     <div className="settings">
+        <div className="settings-left">
           <Sidebar />
         </div>
-        <div className="dashboard-right">
+        <div className="settings-right">
           <Profile />
         </div>
       </div>
