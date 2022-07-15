@@ -53,7 +53,7 @@ const index = ({card}) => {
 
   return (
     <div>
-      <div className="rounded-xl bg-gray p-4 mb-5">
+      <div className="rounded-xl bg-gray p-4 mb-4">
         <div className='flex justify-between text-left' >
             <div>
                 <p className='font-bold text-darkBlack' >{details.title}</p>
