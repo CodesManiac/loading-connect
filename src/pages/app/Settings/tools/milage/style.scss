@@ -1,0 +1,14 @@
+@import '../../../../defaultStyles/Colors.scss';
+@import '../../../../defaultStyles/Typography.scss';
+@import '../../../../defaultStyles/MediaQueries.scss';
+
+.settings-tool{
+    display: flex;
+    height: 100%;
+    &-left{
+        width: 31%;
+    }
+    &-right {
+      width: 69%;
+    }
+}

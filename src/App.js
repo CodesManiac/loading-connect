@@ -9,10 +9,16 @@ import Pricing from "./pages/pricing/Pricing";
 import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy";
 import TermOfService from "./pages/termOfService/TermOfService";
 import Dashboard from "./pages/app/Dashboard";
-import Settings from "./pages/app/Settings";
+import Settings from "./pages/app/Settings/profile";
 import Messages from "./pages/app/Messages";
 import DriverSignup from "./pages/auth/DriverSignup";
 import DriverLogin from "./pages/auth/DriverLogin";
+import EditProfile from "./pages/app/Settings/profile";
+import SavedTruck from "./pages/app/Settings/savedtruck/SavedTruck";
+import RecentTruck from "./pages/app/Settings/recenttruck/RecentTruck";
+import Tools from "./pages/app/Settings/tools/Tools";
+import RateCal from "./pages/app/Settings/tools/rate/RateCal";
+import MilageCal from "./pages/app/Settings/tools/milage/MilageCal";
 
 
 function App() {
@@ -33,6 +39,12 @@ function App() {
         <Route path="/terms" element={<TermOfService />} />
         <Route path="/app/dashboard" element={<Dashboard/>} />
         <Route path="/app/settings" element={<Settings/>} />
+        <Route path="/app/settings/profile" element={<EditProfile />} />
+        <Route path="/app/settings/saved-truck" element={<SavedTruck />} />
+        <Route path="/app/settings/recent-truck" element={<RecentTruck />} />
+        <Route path="/app/settings/tools" element={<Tools />} />
+        <Route path="/app/settings/tools/rate" element={<RateCal />} />
+        <Route path="/app/settings/tools/milage" element={<MilageCal />} />
         <Route path="/app/messages" element={<Messages/>} />
         <Route path="/forget-password" element={<ForgetPassword />} />
       </Routes>

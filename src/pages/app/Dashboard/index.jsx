@@ -13,7 +13,7 @@ const Dashboard = () => {
           <Left />
         </div>
         <div className="dashboard-middle">
-          <Middle />
+          <Middle type='Find Trucks' display="hidden" />
         </div>
         <div className="dashboard-right">
           <Map />

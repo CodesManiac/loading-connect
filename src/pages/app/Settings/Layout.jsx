@@ -1,10 +1,9 @@
 import React from "react";
 import DashboardLayout from "../../../components/DashboardLayout";
-import Profile from "../../../components/settings/Profile";
 import Sidebar from "../../../components/settings/Sidebar";
 import "./styles.scss";
 
-const Dashboard = () => {
+const SettingsLayout = ({children}) => {
   return (
     <DashboardLayout>
      <div className="settings">
@@ -12,11 +11,11 @@ const Dashboard = () => {
           <Sidebar />
         </div>
         <div className="settings-right">
-          <Profile />
+          {children}
         </div>
       </div>
     </DashboardLayout>
   );
 };
 
-export default Dashboard;
+export default SettingsLayout;
