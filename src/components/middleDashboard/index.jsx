@@ -53,8 +53,8 @@ const index = ({card}) => {
 
   return (
     <div>
-      <div className="rounded-xl bg-gray p-4 mb-4">
-        <div className='flex justify-between text-left' >
+      <div className="rounded-xl bg-gray p-2 mb-4">
+        <div className='flex justify-between' >
             <div>
                 <p className='font-bold text-darkBlack' >{details.title}</p>
                 <p className='font-medium'>Truck<span className='font-light'> | {details.model}</span></p>
@@ -63,7 +63,7 @@ const index = ({card}) => {
                 <img src={Truck} alt='truck'></img>
             </div>
         </div>
-        <div className='flex mt-1.5 gap-48 text-left' >
+        <div className='flex mt-1.5 gap-32' >
             <div >
                 <p className='font-light' >Truck</p>
                 <p className='font-medium'>{details.type}</p>
@@ -73,30 +73,30 @@ const index = ({card}) => {
                 <p className='font-medium'>{details.capacity}</p>
             </div>
         </div>
-        <div className='flex mt-1.5 gap-52 text-left' >
+        <div className='flex mt-1.5 gap-32' >
             <div>
                 <p className='font-light'>Distance</p>
                 <p className='font-medium'>{details.dist}<span className='font-light'> km</span></p>
             </div>
-            <div>
+            <div className='pl-3.5'>
                 <p className='font-light'>Weight</p>
                 <p className='font-medium'>{details.weight}<span className='font-light'> kg</span></p>
             </div>
         </div>
-        <div className='flex justify-between mt-2 pl-1 text-left items-center' >
+        <div className='flex justify-between mt-2 pl-1.5' >
             <div>
               <p className='font-bold'>{details.seller}</p>
               <p className='text-yellow'>&#9734; &#9734; &#9734; &#9734; &#9734;</p>
             </div>
-            <div className=' flex text-primary gap-4' >
-              <div className='bg-darkGray rounded-lg p-2' >
-                <a href='/app/dashboard'><img src={Message} alt='add'></img></a>
+            <div className=' flex gap-4 items-center' >
+              <div className='bg-darkGray rounded-lg p-3' >
+                <a href='/app/dashboard'><img src={Message} alt='add' className='w-4'></img></a>
               </div>
-              <div className='bg-darkGray rounded-lg p-2' >
-                <a href='/app/dashboard'><img src={Call} alt='telephone' ></img></a>
+              <div className='bg-darkGray rounded-lg p-3' >
+                <a href='/app/dashboard'><img src={Call} alt='telephone' className='w-4'></img></a>
               </div>
-              <div className='bg-darkGray rounded-lg p-2'>
-              <a href='/app/dashboard'><img src={Plus} alt='add'></img></a>
+              <div className='bg-darkGray rounded-lg p-3'>
+              <a href='/app/dashboard'><img src={Plus} alt='add' className='w-4'></img></a>
               </div>
             </div>
         </div>

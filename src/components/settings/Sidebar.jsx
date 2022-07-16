@@ -1,5 +1,4 @@
 import React from 'react';
-// import { useState} from 'react';
 import Profile_image from '../../assets/images/profile.svg';
 import Star from '../../assets/icons/star.svg';
 import halfStar from '../../assets/icons/half_star.svg';
@@ -16,8 +15,6 @@ import about from '../../assets/icons/about.svg';
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
-
-  // const [activeMenu, setActiveMenu] = useState(0);
   
   const activePath = window.location.pathname.split("/")[3];
   
@@ -90,7 +87,7 @@ const Sidebar = () => {
       className={`hover:bg-orange hover:opacity-75 ${activePath === child.link && "bg-orange"}`}
       key={index}
       >
-          <Link to={"/app/settings/" + child.link}><SideOptions image={child.img} alt={child.alt} child={child.childText} /></Link>
+          <Link to={"/app/settings/" + child.link}><SideOptions display='w-14' image={child.img} alt={child.alt} child={child.childText} /></Link>
       </div>
       ))}
     </div>

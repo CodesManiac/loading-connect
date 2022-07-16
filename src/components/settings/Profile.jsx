@@ -6,7 +6,7 @@ import profile from '../../assets/images/profile.svg'
 
 const Profile = () => {
   return (
-    <div>
+    <div className='p-20'>
         <form className="flex  gap-24 items-center space-x-6">
             <div className="shrink-0">
                 <img className="h-52 w-52 object-cover rounded-full" src={profile} alt="Current profile" />
