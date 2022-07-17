@@ -1,12 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DashboardLayout from "../../../components/DashboardLayout";
-import SendMessage from "../../../components/SendMessage";
-import Search from "../../../assets/icons/search.png";
 import TrackLoad from "../../../assets/icons/tracking-load.png";
-import NoMessage from "../../../assets/icons/no-message.png";
 import Map from "../../../assets/images/map.png";
 import User1 from "../../../assets/images/message-user1.png";
-import User2 from "../../../assets/images/message-user2.png";
 import Message from "../../../assets/icons/message.svg";
 import Call from "../../../assets/icons/call.svg";
 import ListOfLoad from "./ListOfLoad";
@@ -14,32 +10,10 @@ import "./styles.scss";
 
 const History = () => {
   const [activeUser, setActiveUser] = useState(4);
-  const data = [
-    {
-      img: User1,
-      name: "Babatunde Raji",
-      text: "And is it in a box or just as it is in the pictures?",
-      unread: 2,
-    },
-    {
-      img: User2,
-      name: "Chris Alli",
-      text: "And is it in a box or just as it is in the pictures?",
-      unread: 4,
-    },
-    {
-      img: User1,
-      name: "Chris Alli",
-      text: "And is it in a box or just as it is in the pictures?",
-      unread: 0,
-    },
-    {
-      img: User2,
-      name: "Chris Alli",
-      text: "And is it in a box or just as it is in the pictures?",
-      unread: 0,
-    },
-  ];
+
+useEffect(() => {
+  setActiveUser(1);
+}, [activeUser]);
 
   return (
     <DashboardLayout>
