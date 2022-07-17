@@ -10,6 +10,7 @@ import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy";
 import TermOfService from "./pages/termOfService/TermOfService";
 import Dashboard from "./pages/app/Dashboard";
 import Settings from "./pages/app/Settings/profile";
+import History from "./pages/app/History";
 import Messages from "./pages/app/Messages";
 import DriverSignup from "./pages/auth/DriverSignup";
 import DriverLogin from "./pages/auth/DriverLogin";
@@ -38,6 +39,7 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermOfService />} />
         <Route path="/app/dashboard" element={<Dashboard/>} />
+        <Route path="/app/history" element={<History/>} />
         <Route path="/app/settings" element={<Settings/>} />
         <Route path="/app/settings/profile" element={<EditProfile />} />
         <Route path="/app/settings/saved-truck" element={<SavedTruck />} />
