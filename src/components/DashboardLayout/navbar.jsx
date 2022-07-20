@@ -4,6 +4,8 @@ import Logo from "../../assets/images/Logo.svg";
 
 const Navbar = ({ page = "Dashboard" }) => {
   const [showProfileMenu, setShowProfileMenu] = useState(false);
+  const activePath = window.location.pathname.split("/")[2];
+
   return (
     // <!-- This example requires Tailwind CSS v2.0+ -->
 
@@ -67,9 +69,11 @@ const Navbar = ({ page = "Dashboard" }) => {
           </div>
           {/* <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"> */}
           <div className="flex-shrink-0 flex items-center">
-            <img className="block  h-8 w-auto" src={Logo} alt="Workflow" />{" "}
-            <span className="ml-3 text-darkGreen text-[24px] font-[700]">
-              {page}
+            <div className="company-logo w-9">
+              <img className="block  h-8 w-auto" src={Logo} alt="Workflow" />{" "}
+            </div>
+            <span className="ml-3 text-darkGreen text-[24px] font-[700] capitalize">
+              {activePath}
             </span>
             {/* <img className="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow"/>
             <img className="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow"/> */}
@@ -80,29 +84,37 @@ const Navbar = ({ page = "Dashboard" }) => {
               {/* <!-- Current: "bg-gray-900 text-white", Default: "  hover:bg-gray-700 hover:text-white" --> */}
               <a
                 href="/app/dashboard"
-                className="bg-gray-900 text-darkGreen px-3 py-2 rounded-md  font-medium"
+                className={`bg-gray-900  px-3 py-2 rounded-md  font-medium hover:text-darkGreen ${
+                  activePath === "dashboard" && "text-darkGreen"
+                }`}
                 aria-current="page"
               >
                 Dashboard
               </a>
 
               <a
-                href="/app/dashboard"
-                className="  hover:darkBlack hover:text-darkGreen px-3 py-2 rounded-md  font-medium"
+                href="/app/history"
+                className={`bg-gray-900  px-3 py-2 rounded-md  font-medium hover:text-darkGreen ${
+                  activePath === "history" && "text-darkGreen"
+                }`}
               >
                 History
               </a>
 
               <a
                 href="/app/messages"
-                className="  hover:darkBlack hover:text-darkGreen px-3 py-2 rounded-md  font-medium"
+                className={`bg-gray-900  px-3 py-2 rounded-md  font-medium hover:text-darkGreen ${
+                  activePath === "messages" && "text-darkGreen"
+                }`}
               >
                 Messages
               </a>
 
               <a
                 href="/app/settings"
-                className="  hover:darkBlack hover:text-darkGreen px-3 py-2 rounded-md  font-medium"
+                className={`bg-gray-900  px-3 py-2 rounded-md  font-medium hover:text-darkGreen ${
+                  activePath === "settings" && "text-darkGreen"
+                }`}
               >
                 Settings
               </a>
