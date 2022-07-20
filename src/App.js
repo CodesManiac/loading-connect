@@ -19,6 +19,7 @@ import RecentTruck from "./pages/app/Settings/recenttruck/RecentTruck";
 import Tools from "./pages/app/Settings/tools/Tools";
 import RateCal from "./pages/app/Settings/tools/rate/RateCal";
 import MilageCal from "./pages/app/Settings/tools/milage/MilageCal";
+import Notification from "./pages/app/Settings/notification/Notification";
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         <Route path="/app/settings/tools" element={<Tools />} />
         <Route path="/app/settings/tools/rate" element={<RateCal />} />
         <Route path="/app/settings/tools/milage" element={<MilageCal />} />
+        <Route path="/app/settings/notification" element={<Notification />} />
         <Route path="/app/messages" element={<Messages/>} />
         <Route path="/forget-password" element={<ForgetPassword />} />
       </Routes>
