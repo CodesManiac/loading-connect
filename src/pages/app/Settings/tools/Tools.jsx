@@ -9,7 +9,7 @@ const ToolsLayout = ({children}) => {
             <div className=" w-1/3 border-r border-hrgray">
                 <ToolsOptions />
             </div>
-            <div className=" w-2/3">
+            <div className="w-2/3">
                 {children}
             </div>
         </div>

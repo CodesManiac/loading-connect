@@ -20,7 +20,14 @@ import RecentTruck from "./pages/app/Settings/recenttruck/RecentTruck";
 import Tools from "./pages/app/Settings/tools/Tools";
 import RateCal from "./pages/app/Settings/tools/rate/RateCal";
 import MilageCal from "./pages/app/Settings/tools/milage/MilageCal";
-
+import Notification from "./pages/app/Settings/notification/Notification";
+import SecurityLayout from "./pages/app/Settings/security/Securiy";
+import KycVerification from "./pages/app/Settings/security/kyc/KycVerification";
+import BlockedList from "./pages/app/Settings/security/blocked/BlockedList";
+import ChangePassword from "./pages/app/Settings/security/change/ChangePassword";
+import Deactivate from "./pages/app/Settings/security/deactivate/Deactivate";
+import AboutPage from "./pages/app/Settings/about/About";
+import Logout from "./pages/app/Settings/logout/Logout";
 
 function App() {
   return (
@@ -47,6 +54,14 @@ function App() {
         <Route path="/app/settings/tools" element={<Tools />} />
         <Route path="/app/settings/tools/rate" element={<RateCal />} />
         <Route path="/app/settings/tools/milage" element={<MilageCal />} />
+        <Route path="/app/settings/notification" element={<Notification />} />
+        <Route path="/app/settings/security" element={<SecurityLayout />} />
+        <Route path="/app/settings/security/verification" element={<KycVerification />} />
+        <Route path="/app/settings/security/blocked-list" element={<BlockedList />} />
+        <Route path="/app/settings/security/change-password" element={<ChangePassword />} />
+        <Route path="/app/settings/security/deactivate" element={<Deactivate />} />
+        <Route path="/app/settings/about" element={<AboutPage />} />
+        <Route path="/app/settings/logout" element={<Logout />} />
         <Route path="/app/messages" element={<Messages/>} />
         <Route path="/forget-password" element={<ForgetPassword />} />
       </Routes>

@@ -19,9 +19,7 @@ const Middle = ({type, close, display}) => {
         </div>
         <hr className='text-gray my-3'/>
         <div>
-            <MiddleWidget card={1} />
-            <MiddleWidget card={2} />
-            <MiddleWidget card={3} />
+            <MiddleWidget/>
         </div>
     </div>
   )

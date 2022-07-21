@@ -18,7 +18,7 @@ const ToolsOptions = () => {
     ]
 
   return (
-      <div>
+    <div>
       {data.map((options, index)=> (
         <div className={`hover:bg-orange hover:opacity-75 ${activePath === options.link && "bg-orange"}`}
       key={index}
