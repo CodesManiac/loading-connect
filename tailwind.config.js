@@ -21,6 +21,7 @@ module.exports = {
       'green': '#3F2D66',
       'orange': '#FFE081',
       'grayToggle': '#808080',
+      'btnColor': '#E8E8E8',
     },
   },
   plugins: [],

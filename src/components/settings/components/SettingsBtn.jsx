@@ -1,10 +1,10 @@
 import React from "react";
 import "./btn.scss";
 
-const Button = ({ text, action, width, height, color, ground }) => {
+const SettingsBtn = ({ text, action, width, height, color, ground }) => {
   return (
     <button
-      className="btn"
+      className="setting-btn"
       style={{ width: width, height: height, color: color, background: ground}}
       onClick={action}
     >
@@ -13,4 +13,4 @@ const Button = ({ text, action, width, height, color, ground }) => {
   );
 };
 
-export default Button;
+export default SettingsBtn;
