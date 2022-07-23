@@ -4,7 +4,8 @@
 
 .dashboardlayout {
   height: 100vh;
-  // overflow: scroll;
+  overflow: hidden;
+
 
   .dashboard-nav {
     background-color: $secondaryColor;

@@ -58,7 +58,7 @@ const Middle = ({ type }) => {
         </div>
       </div>
       <hr className="text-gray my-3" />
-      <div>
+      <div className="card-item">
         {data.map((item, index) => (
           <LoadCard
             card={1}
