@@ -1,0 +1,19 @@
+@import '../../../../../defaultStyles/Colors.scss';
+@import '../../../../../defaultStyles/Typography.scss';
+@import '../../../../../defaultStyles/MediaQueries.scss';
+
+.side {
+    position:absolute;
+    bottom: -26rem;
+    right: -21rem;
+}
+
+.side:before {
+    content:"\A";
+    border-style: solid;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent $grayColor transparent transparent;
+    position: absolute;
+    top: 20px;
+    left: -15px;
+}

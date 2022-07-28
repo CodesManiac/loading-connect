@@ -2,9 +2,9 @@
 @import "../../../../../defaultStyles/Typography.scss";
 @import "../../../../../defaultStyles/MediaQueries.scss";
 
-select:focus > option:checked {
-    color: $secondaryColor;
-}
+// select:focus > option:checked {
+//     color: $secondaryColor;
+// }
 .hidden-div{
     display: none;
 }

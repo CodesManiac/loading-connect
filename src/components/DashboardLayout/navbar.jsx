@@ -130,11 +130,11 @@ const Navbar = ({ page = "Dashboard" }) => {
           </button> */}
 
             {/* <!-- Profile dropdown --> */}
-            <div className="ml-3 relative">
+            <div className="ml-3 relative z-10">
               <div>
                 <button
                   type="button"
-                  className="bg-gray-800 flex  rounded-full items-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                  className="bg-gray-800 flex  rounded-full items-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white px-2"
                   id="user-menu-button"
                   aria-expanded="false"
                   aria-haspopup="true"

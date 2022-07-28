@@ -7,7 +7,7 @@ const SavedTruck = () => {
   return (
     <SettingsLayout>
       <div className="p-5 w-96">
-         <Middle type='Saved Trucks' close={Close}/>
+         <Middle type='Saved Trucks' close={Close} newPath="/open" />
        </div>
        <div className="settings-saved-right">
           

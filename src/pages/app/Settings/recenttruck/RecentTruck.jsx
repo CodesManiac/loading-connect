@@ -7,7 +7,7 @@ const RecentTruck = () => {
   return (
     <SettingsLayout>
       <div className="p-5 w-96">
-         <Middle type='Recent Trucks' close={Close}/>
+         <Middle type='Recent Trucks' close={Close} newPath="/open"/>
        </div>
     </SettingsLayout>
   )
