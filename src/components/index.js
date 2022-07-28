@@ -1,5 +1,6 @@
 import Faq from "./faq/Faq";
-import NavBar from "./navBar/NavBar";
+// import NavBar from "./navBar/NavBar";
+import NavBar from "./navBar/Nav";
 import Footer from "./footer/Footer";
 import Service from "./services/Service";
 import Work from "./works/Work";
