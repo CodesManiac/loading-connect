@@ -1,12 +1,14 @@
 import React, {useState} from 'react'
+import './input.scss'
+
 
 const Select = ({labelName}) => {
     const [showLabel, setShowLabel] = useState(false)
   return (
     <div className='select-container'>
         {showLabel&& <label className='select-label-field' >{labelName}</label>}
-        <select name="state" id="state" className='select-input-field text-placeholderGray' required onClick={(e)=> e.target.value?setShowLabel(true):setShowLabel(false)}>
-            <option value="" selected>State of Residence</option>
+        <select name="state" id="state" className='select-input-field ' required onClick={(e)=> e.target.value?setShowLabel(true):setShowLabel(false)}>
+            <option value="" selected default className='text-placeholderGray'>State of Residence</option>
             <option value="Abia">Abia</option>
             <option value="Adamawa">Adamawa</option>
             <option value="AkwaIbom">AkwaIbom</option>

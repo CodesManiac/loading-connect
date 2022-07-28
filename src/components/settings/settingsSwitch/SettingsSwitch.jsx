@@ -22,7 +22,8 @@ const SettingsSwitch = ({allNotification, child}) => {
         after:content-[''] after:absolute after:top-1 after:left-0 
          after:bg-grayToggle
          peer-checked:after:bg-secondary
-         after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
+         after:rounded-full after:h-4 after:w-4 after:transition-all">
+         </div>
         </label>
         <p className='text-base'>{child}</p>
 

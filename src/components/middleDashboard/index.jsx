@@ -4,7 +4,9 @@ import Message from '../../assets/icons/message.svg'
 import Plus from '../../assets/icons/add.svg'
 import Call from '../../assets/icons/call.svg'
 
-const index = ({card}) => {
+const index = () => {
+  const activePath = window.location.pathname;
+
   const details = [
     {
       img: Truck,
@@ -78,13 +80,17 @@ const index = ({card}) => {
             </div>
             <div className=' flex gap-4 items-center' >
               <div className='bg-darkGray rounded-lg p-3' >
-                <a href='/app/dashboard'><img src={Message} alt='add' className='w-4'></img></a>
+                <a href={activePath}><img src={Message} alt='add' className='w-4'></img></a>
+                {/* <a href='/app/dashboard'><img src={Message} alt='add' className='w-4'></img></a> */}
               </div>
               <div className='bg-darkGray rounded-lg p-3' >
-                <a href='/app/dashboard'><img src={Call} alt='telephone' className='w-4'></img></a>
+                <a href={activePath}><img src={Call} alt='telephone' className='w-4'></img></a>
+                {/* <a href='/app/dashboard'><img src={Call} alt='telephone' className='w-4'></img></a> */}
               </div>
+              {/* </div> */}
               <div className='bg-darkGray rounded-lg p-3'>
-              <a href='/app/dashboard'><img src={Plus} alt='add' className='w-4'></img></a>
+              <a href={activePath}><img src={Plus} alt='add' className='w-4'></img></a>
+              {/* <a href='/app/dashboard'><img src={Plus} alt='add' className='w-4'></img></a> */}
               </div>
             </div>
         </div>

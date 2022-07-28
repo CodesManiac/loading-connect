@@ -28,6 +28,8 @@ import ChangePassword from "./pages/app/Settings/security/change/ChangePassword"
 import Deactivate from "./pages/app/Settings/security/deactivate/Deactivate";
 import AboutPage from "./pages/app/Settings/about/About";
 import Logout from "./pages/app/Settings/logout/Logout";
+import Saved2Screen from "./pages/app/Settings/savedtruck/Saved2screen";
+import Recent2Screen from "./pages/app/Settings/recenttruck/Recent2Screen";
 
 function App() {
   return (
@@ -50,7 +52,9 @@ function App() {
         <Route path="/app/settings" element={<Settings/>} />
         <Route path="/app/settings/profile" element={<EditProfile />} />
         <Route path="/app/settings/saved-truck" element={<SavedTruck />} />
+        <Route path="/app/settings/saved-truck/open" element={<Saved2Screen />} />
         <Route path="/app/settings/recent-truck" element={<RecentTruck />} />
+        <Route path="/app/settings/recent-truck/open" element={<Recent2Screen />} />
         <Route path="/app/settings/tools" element={<Tools />} />
         <Route path="/app/settings/tools/rate" element={<RateCal />} />
         <Route path="/app/settings/tools/milage" element={<MilageCal />} />

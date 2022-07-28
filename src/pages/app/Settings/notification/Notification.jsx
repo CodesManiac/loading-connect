@@ -4,7 +4,7 @@ import SettingsSwitch from '../../../../components/settings/settingsSwitch/Setti
 import SettingsLayout from '../Layout'
 
 const Notification = () => {
-  const action = "checked"
+  // const action = "checked"
   const [allNotification, setAllNotification] = useState(0);
   return (
     <SettingsLayout>
@@ -18,10 +18,10 @@ const Notification = () => {
 
           <p className='text-xs text-grayToggle'>Load Updates</p>
           <SettingsSwitch
-          allNotification={!action}
+          // allNotification={!action}
           child="Offer Received" />
           <SettingsSwitch
-          allNotification={!action}
+          // allNotification={!action}
           child="Offer Accepted" />
           <SettingsSwitch
           child="Load Picked Up" />

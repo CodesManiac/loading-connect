@@ -2,16 +2,18 @@ import React from 'react'
 import MiddleWidget from '../../../components/middleDashboard/index'
 import Bar from '../../../assets/icons/bars.svg'
 import Filter from '../../../assets/icons/filter.svg'
+import {Link} from 'react-router-dom'
 
-const Middle = ({type, close, display}) => {
-
+const Middle = ({type, close, display, newPath}) => {
+  const activePath = window.location.pathname;
   return (
     <div className='text-xs'>
         <div className='flex justify-between' >
             <div>
-            <p className='font-bold'>{type}</p>
+
+            <Link to={activePath + newPath}><p className='font-bold'>{type}</p></Link>
             </div>
-            <div className='flex gap-5'>
+            <div className='flex gap-5 cursor-pointer'>
             <img src={Bar} alt='Order icon' className=''></img>
             <img src={Filter} alt='filter'></img>
             <img src={close} alt='close' className={display}></img>
