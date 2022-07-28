@@ -24,6 +24,7 @@
     height: 67px;
     padding: 0.4em 0.6em 0;
     width: 100%;
+    @include CircularTheme(500, 12px, normal, 12px);
 }
 
 .label-field{
@@ -50,6 +51,20 @@
 .input-field::placeholder{
     font-size: 16px;
 }
+
+select {
+    color: $placeholderGray;
+    font-size: 16px;
+}
+// select:enabled{
+//     font-size: 24px;
+//     color: $blackColor;
+// }
+
+// select:focus > option {
+//     font-size: 18px;
+//     color: $blackColor;
+// }
 
 .input-field:-webkit-autofill,
 .input-field:-webkit-autofill:hover, 

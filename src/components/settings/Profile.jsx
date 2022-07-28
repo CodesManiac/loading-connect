@@ -27,7 +27,7 @@ const Profile = () => {
                 <Input type='email' holder='Email' labelName='Email' />
             </div>
             <div className='flex flex-wrap md:flex-nowrap gap-6'>
-                    <Select labelName='State of Residence' />
+                <Select labelName='State of Residence' />
                 <Input type='address' holder='Address' labelName='Address' />
             </div>
             <div>

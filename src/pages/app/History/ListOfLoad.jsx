@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import LoadCard from "./LoadCard";
 import Bar from "../../../assets/icons/bars.svg";
 import Filter from "../../../assets/icons/filter.svg";
+import close from '../../../assets/icons/close.svg';
 
-const Middle = ({ type }) => {
+const Middle = ({ type, display }) => {
   const [activeCard, setActiveCard] = useState(1);
   const data = [
     {
@@ -55,6 +56,7 @@ const Middle = ({ type }) => {
         <div className="flex gap-5">
           <img src={Bar} alt="Order icon" className=""></img>
           <img src={Filter} alt="filter"></img>
+          <img src={close} alt='close' className={display}></img>
         </div>
       </div>
       <hr className="text-gray my-3" />
