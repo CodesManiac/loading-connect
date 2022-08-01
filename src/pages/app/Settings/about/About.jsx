@@ -12,7 +12,7 @@ const About = () => {
             <div className='w-2/4'>
                 <img src={logo} alt='logo' className='w-full p-32'></img>
             </div>
-            <hr className='text-hrgray border h-2/3 opacity-20' />
+            <hr className='text-hrgray border h-2/3 opacity-10' />
             <div className='w-2/4 flex flex-col items-center p-20'>
                 <h2 className='text-2xl font-bold'>Load Connect</h2>
                 <p className='text-xs'>V1.01</p>

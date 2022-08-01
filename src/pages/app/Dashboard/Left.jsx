@@ -35,7 +35,7 @@ const Left = () => {
           <p> Schedule Load</p>
         </div>
       </div>
-      <hr className='mb-6' />
+      <hr className='mb-6 text-hrgray opacity-10' />
       <div>
         <p className='heading mb-4'>Recent Routes</p>
         {routes.map((route) => (

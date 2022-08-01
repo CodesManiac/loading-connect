@@ -6,7 +6,7 @@ const SecurityLayout = ({children}) => {
   return (
     <SettingsLayout>
     <div className='flex h-full'>
-        <div className=" w-1/3 border-r border-hrgray">
+        <div className=" w-1/3 border-r border-hrgray border-opacity-10">
             <SecurityOptions />
         </div>
         <div className="w-2/3">
