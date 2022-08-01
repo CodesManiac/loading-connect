@@ -1,0 +1,51 @@
+@import "../../../../../defaultStyles/Colors.scss";
+@import "../../../../../defaultStyles/Typography.scss";
+@import "../../../../../defaultStyles/MediaQueries.scss";
+
+.choose-modal{
+    position: absolute;
+    top: 250px;
+    right: 70px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.choose-input-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $whiteColor;
+    border-radius: 10px;
+    padding: 0.8em;
+    @include CircularTheme(500, 12px, normal, 12px);
+}
+.choose-label-field{
+    color: $lightBlackColor;
+    // padding-bottom: 3px;
+}
+.choose-input-field{
+    background: $whiteColor;
+    border-radius: 10px;
+    text-align: left;
+    padding: 0 0 0 5px;
+    border: none;
+    font-size: 14px;
+}
+.choose-input-field::placeholder{
+    font-size: 14px;
+}
+.choose-input-field:-webkit-autofill,
+.choose-input-field:-webkit-autofill:hover, 
+.choose-input-field:-webkit-autofill:focus, 
+.choose-input-field:-webkit-autofill:active,
+.choose-input-field:focus  {
+    -webkit-box-shadow: 0 0 0 30px $whiteColor inset;
+    box-shadow: 0 0 0 30px $whiteColor inset;
+    outline: none;
+}
+.choose-btn {
+    background-color: $primaryColor;
+    padding: 17px 1.37rem;
+    border-radius: 10px;
+    color: $whiteColor;
+}

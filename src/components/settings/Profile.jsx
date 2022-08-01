@@ -17,7 +17,7 @@ const Profile = () => {
             
         </form>
         <hr className='text-hrgray my-4'/>
-        <div className='flex flex-col gap-5'>
+        <form className='flex flex-col gap-5'>
             <div className='flex flex-wrap md:flex-nowrap gap-6'>
                 <Input type='text' holder='First Name' labelName='First Name' />
                 <Input type='text' holder='Last Name' labelName='Last Name' />
@@ -33,7 +33,7 @@ const Profile = () => {
             <div>
                 <Button text='Save Changes' action='submit'/>
             </div>
-        </div>
+        </form>
     </div>
   )
 }
