@@ -38,8 +38,16 @@
 .input-field{
     background: $grayColor;
     border-radius: 10px;
+    padding: 0 5px;
     border: none;
     font-size: 24px;
+}
+.settings-input{
+    background: $grayColor;
+    border-radius: 10px;
+    border: none;
+    font-size: 24px;
+    padding: 0.2rem 0.1rem 0.875rem 2.25rem;
 }
 .select-input-field{
     background: $grayColor;

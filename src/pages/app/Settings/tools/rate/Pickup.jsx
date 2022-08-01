@@ -23,8 +23,8 @@ const Pickup = () => {
         <p>Choose Pick Up and Destination</p>
         <form className='flex flex-col gap-3 relative'>
             <img src={line} alt='joining line' className='h-20 absolute top-7 left-5 z-10'></img>
-            <img src={switchBtn} alt='switching button' className='h-10 absolute top-12 left-36 z-10'></img>
-            <img src={circle} alt='green circle' className='absolute top-6 left-3 z-20'></img>
+            <img src={switchBtn} alt='switching button' className='h-10 absolute top-11 left-36 z-10'></img>
+            <img src={circle} alt='green circle' className='absolute top-5 left-3 z-20'></img>
             <img src={circle} alt='green circle' className='absolute top-24 left-3 z-20'></img>
             <SettingsInput holder='Pickup Location' />
             <div className='relative'>
@@ -87,9 +87,10 @@ const Pickup = () => {
                   </div>
                   <hr className='text-grayToggle opacity-20'/>
                   </div>
-                  <div className='flex justify-center gap-2 bg-primary rounded-br-xl px-5 py-3 text-white'>
+                  <div className='flex justify-center gap-2 bg-primary rounded-br-xl px-5 py-3 text-white'
+                  onClick={() => setLocation(!location)}>
                     <img src={point} alt=""></img>
-                    <p>Choose on Map</p>
+                    <p >Choose on Map</p>
                   </div>
                 </div>
               )}
