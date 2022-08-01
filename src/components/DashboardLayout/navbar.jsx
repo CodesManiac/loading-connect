@@ -111,7 +111,7 @@ const Navbar = ({ page = "Dashboard" }) => {
               </a>
 
               <a
-                href="/app/settings"
+                href="/app/settings/profile"
                 className={`bg-gray-900  px-3 py-2 rounded-md  font-medium hover:text-darkGreen ${
                   activePath === "settings" && "text-darkGreen"
                 }`}

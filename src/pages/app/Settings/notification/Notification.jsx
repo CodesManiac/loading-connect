@@ -14,7 +14,7 @@ const Notification = () => {
             // allNotification = {action}
             // {allNotification ? "checked" : null}
             child="All Notifications" />
-          <hr className='text-hrgray my-6'/>
+          <hr className='text-hrgray my-6 opacity-10'/>
 
           <p className='text-xs text-grayToggle'>Load Updates</p>
           <SettingsSwitch
@@ -29,14 +29,14 @@ const Notification = () => {
           child="Load Delivered" />
           <SettingsSwitch
           child="Delivery Errors" />
-          <hr className='text-hrgray my-6'/>
+          <hr className='text-hrgray my-6 opacity-10'/>
 
           <p className='text-xs text-grayToggle'>Messages</p>
           <SettingsSwitch
           child="All Messages" />
           <SettingsSwitch
           child="From Active Loads Only" />
-          <hr className='text-hrgray my-6'/>
+          <hr className='text-hrgray my-6 opacity-10'/>
 
           <p className='text-xs text-grayToggle'>Others</p>
           <SettingsSwitch

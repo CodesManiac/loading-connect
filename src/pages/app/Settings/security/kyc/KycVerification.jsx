@@ -15,12 +15,11 @@ const KycVerification = () => {
     setFile(inputImage.name)
   }
 
-  const hideText =()=>{
-    const uploadInfo = document.getElementById("uploads");
-    console.log('mercy')
-    if(file === '')
-      uploadInfo.classList.add("hidden-div");
-  }
+  // const hideText =()=>{
+  //   const uploadInfo = document.getElementById("uploads");
+  //   if(file === '')
+  //     uploadInfo.classList.add("hidden-div");
+  // }
 
   return (
     <SecurityLayout>
@@ -51,7 +50,7 @@ const KycVerification = () => {
             <div className='flex justify-between border border-darkGray p-2 rounded-lg'>
                 <p>Permanennt Voter's Card (PVC)</p>
                 <input type='radio' name='verification-type' value="PVC" className=''/>
-                {/* <div className="
+                <div className="
                 peer
                 peer-checked:after:content-['✓']
                 after:absolute
@@ -61,12 +60,12 @@ const KycVerification = () => {
                 peer-checked:after:bg-secondary
                 ring-peer-checked:after:ring-black
                 after:rounded-full after:h-5 after:w-5 after:transition-all">
-                </div> */}
+                </div>
             </div>
             <div className='flex justify-between border border-darkGray p-2 rounded-lg'>
                 <p>Driver's License</p>
                 <input type='radio' name='verification-type' value="Drivers-license" className=''/>
-                {/* <div className="
+                <div className="
                 peer
                 peer-checked:after:content-['✓']
                 after:absolute
@@ -76,14 +75,14 @@ const KycVerification = () => {
                 peer-checked:after:bg-secondary
                 ring-peer-checked:after:ring-black
                 after:rounded-full after:h-5 after:w-5 after:transition-all">
-                </div> */}
+                </div>
             </div>
             <div className='flex justify-between border border-darkGray p-2 rounded-lg'>
                 <p>National Identification Number (NIN)</p>
                 <input type='radio' 
                 name='verification-type' value="NIN"
                 className=''/>
-                {/* <div className="
+                <div className="
                 peer
                 peer-checked:after:content-['✓']
                 after:absolute
@@ -93,7 +92,7 @@ const KycVerification = () => {
                 peer-checked:after:bg-secondary
                 ring-peer-checked:after:ring-black
                 after:rounded-full after:h-5 after:w-5 after:transition-all">
-                </div> */}
+                </div>
             </div>
             </div>
           )}
@@ -101,15 +100,15 @@ const KycVerification = () => {
           <label for='input-tag' className="block text-primary font-bold text-sm mt-5"
           >Upload Document Image
                 <div className='border border-dashed border-darkGray h-40 mt-2 mb-10 rounded-lg flex justify-center items-center'
-                onClick={hideText}
-                >
-                  <div id='uploads' className='flex gap-4' >
+                > 
+                  {!file &&
+                    <div id='uploads' className='flex gap-4' >
                   <img src={download} alt='drag and drop'></img>
                   <div>
                     <p className='text-darkGreen'>Drag your Image here, or <span className='text-primary'>Browse</span></p>
                     <p className='text-xs text-darkGreen'>Supports jpg, jpeg & PNG</p>
                   </div>
-                  </div>
+                  </div>}
                   <span id='imageName' className='text-primary'>{file}</span>
                   </div>
                 <input id='input-tag' type="file" className='hidden' onChange={showImage}/>

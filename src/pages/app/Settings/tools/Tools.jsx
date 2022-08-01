@@ -6,7 +6,7 @@ const ToolsLayout = ({children}) => {
   return (
     <SettingsLayout>
         <div className='flex h-full'>
-            <div className=" w-1/3 border-r border-hrgray">
+            <div className=" w-1/3 border-r border-hrgray border-opacity-10">
                 <ToolsOptions />
             </div>
             <div className="w-2/3">

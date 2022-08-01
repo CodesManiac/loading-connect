@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Profile_image from '../../assets/images/profile.svg';
 import Star from '../../assets/icons/star.svg';
 import halfStar from '../../assets/icons/half_star.svg';
@@ -15,9 +15,9 @@ import about from '../../assets/icons/about.svg';
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
-  
   const activePath = window.location.pathname.split("/")[3];
-  
+  const [path, setPath] = useState(activePath);
+
   const info = [
     {
       childText: "Edit Profile",
@@ -41,7 +41,7 @@ const Sidebar = () => {
       childText: "Tools",
       img: tools,
       alt: "tools",
-      link: "tools"
+      link: "tools/rate"
     },
     {
       childText: "Notification Settings",
@@ -53,7 +53,7 @@ const Sidebar = () => {
       childText: "Security & Password",
       img: security,
       alt: "lock",
-      link: "security"
+      link: "security/verification"
     },
     {
       childText: "About Load Connect",
@@ -82,10 +82,12 @@ const Sidebar = () => {
             <img src={whiteStar} alt='star' className='text-primary'></img>          
         </div>
       </div>
+      <hr className='text-hrgray opacity-10 my-2'/>
       {info.map((child, index)=> (
       <div
-      className={`hover:bg-orange hover:opacity-75 ${activePath === child.link && "bg-orange"}`}
+      className={` hover:bg-orange hover:opacity-75 ${path === child.link && "bg-orange"}`}
       key={index}
+      onClick={()=>setPath(index)}
       >
           <Link to={"/app/settings/" + child.link}><SideOptions display='w-14' image={child.img} alt={child.alt} child={child.childText} /></Link>
       </div>
