@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SettingsSwitch = ({allNotification, child}) => {
+const SettingsSwitch = ({onChecked, checkbox, name, child}) => {
   return (
     <div className='flex gap-3 mt-4'>
         <label 
@@ -10,8 +10,10 @@ const SettingsSwitch = ({allNotification, child}) => {
         <input 
         type ='checkbox' 
         id='toggle'
-        checked = {allNotification}
-        className='sr-only peer'  
+        checked = {checkbox}
+        className='sr-only peer'
+        onChange = {onChecked}
+        name={name}
         />
         <div className="w-7 h-3.5 rounded-full
         bg-grayToggle bg-opacity-50 
