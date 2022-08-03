@@ -1,8 +1,8 @@
 import React from 'react'
 import MiddleWidget from '../../../components/middleDashboard/index'
-import Bar from '../../../assets/icons/bars.svg'
-import Filter from '../../../assets/icons/filter.svg'
 import {Link} from 'react-router-dom'
+import Filter from '../../../components/filter'
+import Sort from '../../../components/sort'
 
 const Middle = ({type, close, display, newPath}) => {
   const activePath = window.location.pathname;
@@ -14,8 +14,8 @@ const Middle = ({type, close, display, newPath}) => {
             <Link to={activePath + newPath}><p className='font-bold'>{type}</p></Link>
             </div>
             <div className='flex gap-5 cursor-pointer'>
-            <img src={Bar} alt='Order icon' className=''></img>
-            <img src={Filter} alt='filter'></img>
+            <Sort />
+            <Filter />
             <img src={close} alt='close' className={display}></img>
             </div>
         </div>
