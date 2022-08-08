@@ -56,7 +56,7 @@ const index = ({ details, index, activeCard, setActiveCard }) => {
             </div>
             <div className=" flex gap-4 items-center">
               <div className="bg-darkGray rounded-lg p-3">
-                <a href="/app/dashboard">
+                <a href="/app/messages">
                   <img src={Message} alt="add" className="w-4"></img>
                 </a>
               </div>

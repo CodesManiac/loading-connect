@@ -80,7 +80,7 @@ const index = () => {
             </div>
             <div className=' flex gap-4 items-center' >
               <div className='bg-darkGray rounded-lg p-3' >
-                <a href={activePath}><img src={Message} alt='add' className='w-4'></img></a>
+                <a href={"/app/messages"}><img src={Message} alt='add' className='w-4'></img></a>
                 {/* <a href='/app/dashboard'><img src={Message} alt='add' className='w-4'></img></a> */}
               </div>
               <div className='bg-darkGray rounded-lg p-3' >

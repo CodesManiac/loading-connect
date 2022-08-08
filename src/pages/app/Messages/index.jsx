@@ -78,8 +78,7 @@ const Messages = () => {
             No Messages
           </div>
           <div className="send-container">
-
-          <SendMessage/>
+            <SendMessage />
           </div>
         </div>
       </div>
