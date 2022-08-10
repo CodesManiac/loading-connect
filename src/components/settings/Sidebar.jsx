@@ -23,48 +23,56 @@ const Sidebar = () => {
       childText: "Edit Profile",
       img: pencil,
       alt: "pencil",
+      activePath: "profile",
       link: "profile"
     },
     {
       childText: "Saved Trucks",
       img: truck,
       alt: "truck",
+      activePath: "saved-truck",
       link: "saved-truck"
     },
     {
       childText: "Recently Viewed Trucks",
       img: recent,
       alt: "recently viewed trucks",
+      activePath: "recent-truck",
       link: "recent-truck"
     },
     {
       childText: "Tools",
       img: tools,
       alt: "tools",
+      activePath: "tools",
       link: "tools/rate"
     },
     {
       childText: "Notification Settings",
       img: notify,
       alt: "notify me",
+      activePath: "notification",
       link: "notification"
     },
     {
       childText: "Security & Password",
       img: security,
       alt: "lock",
+      activePath: "security",
       link: "security/verification"
     },
     {
       childText: "About Load Connect",
       img: about,
       alt: "about load connect",
+      activePath: "about",
       link: "about"
     },
     {
       childText: "Logout",
       img: logout,
       alt: "logout",
+      activePath: "logout",
       link: "logout"
     },
   ]
@@ -85,7 +93,7 @@ const Sidebar = () => {
       <hr className='text-hrgray opacity-10 my-2'/>
       {info.map((child, index)=> (
       <div
-      className={` hover:bg-orange hover:opacity-75 ${path === child.link && "bg-orange"}`}
+      className={` hover:bg-orange hover:opacity-75 ${path === child.activePath && "bg-orange"}`}
       key={index}
       onClick={()=>setPath(index)}
       >
