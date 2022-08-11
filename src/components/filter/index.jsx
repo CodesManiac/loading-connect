@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import filter from "../../assets/icons/filter.svg";
 import fill from "../../assets/icons/fill-filter.svg";
 import close from "../../assets/icons/close-fill.svg";
 import Button from "../button";
 import greenTick from '../../assets/icons/green-tick.svg';
+import Slider from "../slider";
+import { useEffect } from "react";
 
 const Filter = () => {
   const [showFilter, setShowFilter] = useState(false);
-  const [seleectLoadStatus, setSeleectLoadStatus] = useState([]);
+  const [seleectLoadStatus, setSeleectLoadStatus] = useState(["Negotiating", "Full Truck Load", "Mini Truck"]);
+  const [weightValue, setWeightValue] = useState(0);
 
   const handleSelectedStatus = (status) => {
     if (seleectLoadStatus.includes(status)) {
@@ -16,6 +19,32 @@ const Filter = () => {
     }
     setSeleectLoadStatus([...seleectLoadStatus, status]);
   };
+
+  const handleClickOutside=()=>{
+    setShowFilter(showFilter)
+  }
+
+  const useOutsideClick = () =>{
+    const ref = useRef();
+
+    useEffect(()=>{
+      const handleClick =(event)=>{
+        // callback();
+        if (ref.current && !ref.current.contains(event.target)) {
+          handleClickOutside();
+        }
+      };
+      document.addEventListener('click', handleClick);
+
+      return ()=>{
+        document.removeEventListener('click', handleClick);
+      };
+    }, []);
+
+    return ref;
+  };
+
+  const ref = useOutsideClick(handleClickOutside)
 
   const status = [
     "Created",
@@ -32,10 +61,10 @@ const Filter = () => {
 
   const category = ["Any", "Mini Truck", "Van", "Trailer"];
   return (
-    <div className="cursor-pointer relative z-10">
+    <div ref={ref} className="cursor-pointer relative z-10">
       <img src={filter} alt="" onClick={() => setShowFilter(!showFilter)}></img>
       {showFilter && (
-        <div className="w-96 absolute -top-3 left-20 text-sm bg-semiwhite rounded-lg p-4">
+        <div  className="w-96 absolute -top-3 left-20 text-sm bg-semiwhite rounded-lg p-4">
           <div className=" flex justify-between text-grayToggle">
             <div className="flex gap-2">
               <img src={fill} alt=""></img>
@@ -108,13 +137,19 @@ const Filter = () => {
             </div>
             <div className="flex flex-col justify-center text-center">
               <p className="text-xs text-left text-grayToggle">Load Weight</p>
-              <div className="flex justify-between mt-1 mb-10">
-                <p className="bg-gray p-2 rounded-lg">0kg</p>
-                <p>_</p>
-                <p className="bg-gray p-2 rounded-lg">100kg</p>
+              <div className="mb-10">
+                <div className="flex justify-between mt-1 mb-1 items-center">
+                  <p className="bg-gray p-2 rounded-lg">0kg</p>
+                  <p>{weightValue}kg</p>
+                  <p className="bg-gray p-2 rounded-lg">100kg</p>
+                </div>
+                <div className="mb-3">
+                  <Slider weightValue={weightValue} setWeightValue={setWeightValue}/>
+                </div>
               </div>
+              
               <Button text="Apply Filters" />
-              <p className="text-primary my-8">Reset</p>
+              <p className="text-primary my-8" onClick={()=> setSeleectLoadStatus('') }>Reset</p>
             </div>
           </div>
         </div>
