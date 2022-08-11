@@ -38,9 +38,9 @@ const KycVerification = () => {
               {data.map((child, index)=>(
               <div className='flex justify-between border border-darkGray p-2 rounded-lg'>
                 <p>{child}</p>
-                <div className=''>
+                <div className='flex'>
                   <input type='radio' name='verification-type' value={child} className='peer'
-                  checked = {verification === index}
+                  // checked = {verification === index}
                   key = {index}
                   onClick={()=> setVerification(verification)}
                   />
