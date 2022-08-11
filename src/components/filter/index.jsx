@@ -3,13 +3,11 @@ import filter from "../../assets/icons/filter.svg";
 import fill from "../../assets/icons/fill-filter.svg";
 import close from "../../assets/icons/close-fill.svg";
 import Button from "../button";
+import greenTick from '../../assets/icons/green-tick.svg';
 
 const Filter = () => {
   const [showFilter, setShowFilter] = useState(false);
-  const [seleectLoadStatus, setSeleectLoadStatus] = useState([
-    "out for delivery",
-    "Created",
-  ]);
+  const [seleectLoadStatus, setSeleectLoadStatus] = useState([]);
 
   const handleSelectedStatus = (status) => {
     if (seleectLoadStatus.includes(status)) {
@@ -22,7 +20,7 @@ const Filter = () => {
   const status = [
     "Created",
     "Negotiating",
-    "out for delivery",
+    "Out for delivery",
     "Ready for pickup",
     "Delivered",
     "Cancelled",
@@ -37,7 +35,7 @@ const Filter = () => {
     <div className="cursor-pointer relative z-10">
       <img src={filter} alt="" onClick={() => setShowFilter(!showFilter)}></img>
       {showFilter && (
-        <div className="w-80 absolute -top-3 left-20 text-sm bg-semiwhite rounded-lg p-4">
+        <div className="w-96 absolute -top-3 left-20 text-sm bg-semiwhite rounded-lg p-4">
           <div className=" flex justify-between text-grayToggle">
             <div className="flex gap-2">
               <img src={fill} alt=""></img>
@@ -60,12 +58,12 @@ const Filter = () => {
                   <p
                     className={` text-center font-medium opacity-50 border rounded-2xl py-1 px-2 mt-1 ${
                       seleectLoadStatus.includes(child) &&
-                      "border-primary border-2"
+                      "border-secondary border-2 flex gap-1 opacity-90"
                     }`}
                     onClick={() => handleSelectedStatus(child)}
                     key={index}
                   >
-                    {seleectLoadStatus.includes(child) && "yes "}
+                    {seleectLoadStatus.includes(child) && <img src={greenTick} alt="g" className="flex flex-col"></img>}
                     {child}
                   </p>
                 ))}
@@ -75,7 +73,15 @@ const Filter = () => {
               <p className="text-xs text-grayToggle">Load Type</p>
               <div className="flex flez-wrap gap-1">
                 {type.map((child, index) => (
-                  <p className="flex text-center opacity-50 font-medium border rounded-2xl py-1 px-2 mt-1">
+                  <p 
+                    className={` text-center font-medium opacity-50 border rounded-2xl py-1 px-2 mt-1 ${
+                      seleectLoadStatus.includes(child) &&
+                      "border-secondary border-2 flex gap-1 opacity-90"
+                    }`}
+                    onClick={() => handleSelectedStatus(child)}
+                    key={index}
+                  >
+                    {seleectLoadStatus.includes(child) && <img src={greenTick} alt="g" className="flex flex-col"></img>}
                     {child}
                   </p>
                 ))}
@@ -86,7 +92,15 @@ const Filter = () => {
               <p className="text-xs text-grayToggle">Truck Category</p>
               <div className="flex flex-wrap gap-1">
                 {category.map((child, index) => (
-                  <p className="text-center opacity-50 font-medium border rounded-2xl py-1 px-2 mt-1">
+                  <p
+                    className={` text-center font-medium opacity-50 border rounded-2xl py-1 px-2 mt-1 ${
+                      seleectLoadStatus.includes(child) &&
+                      "border-secondary border-2 flex gap-1 opacity-90"
+                    }`}
+                    onClick={() => handleSelectedStatus(child)}
+                    key={index}
+                  >
+                    {seleectLoadStatus.includes(child) && <img src={greenTick} alt="g" className="flex flex-col"></img>}
                     {child}
                   </p>
                 ))}
