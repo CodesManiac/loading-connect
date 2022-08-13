@@ -7,7 +7,7 @@
   height: 100%;
   .left-panel {
     width: 400px;
-    border-right: 1px solid rgba(144,141,141, 0.1);
+    border-right: 1px solid rgba(144, 141, 141, 0.1);
     height: 100%;
     .search {
       height: 54px;
@@ -48,7 +48,7 @@
         cursor: pointer;
         margin-top: 10px;
         padding: 16px;
-        &:hover{
+        &:hover {
           background: #ffe081;
           opacity: 0.6;
         }
@@ -63,7 +63,6 @@
           }
         }
         .user-left {
-          
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -75,17 +74,17 @@
             opacity: 1;
             color: #19352a;
           }
-          .text{
+          .text {
             opacity: 0.5;
             font-size: 12px;
           }
-          .text-active{
+          .text-active {
             color: #007683;
             font-weight: 500;
             font-size: 12px;
             opacity: 1;
           }
-          .number-of-message{
+          .number-of-message {
             background-color: $blackColor;
             color: $whiteColor;
             height: 20px;
@@ -96,8 +95,8 @@
           }
         }
       }
-      .user-card-active{
-        background: #ffe081
+      .user-card-active {
+        background: #ffe081;
       }
     }
   }
@@ -118,12 +117,11 @@
       opacity: 0.3;
       text-align: center;
     }
-    .send-container{
+    .send-container {
       width: 100%;
       position: absolute;
       bottom: 0;
       margin: 0 auto;
-
     }
   }
 }

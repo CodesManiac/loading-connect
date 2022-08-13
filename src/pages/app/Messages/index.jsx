@@ -5,6 +5,7 @@ import Search from "../../../assets/icons/search.png";
 import NoMessage from "../../../assets/icons/no-message.png";
 import User1 from "../../../assets/images/message-user1.png";
 import User2 from "../../../assets/images/message-user2.png";
+import Chat from "./Chat";
 import "./styles.scss";
 
 const Messages = () => {
@@ -73,10 +74,11 @@ const Messages = () => {
           </div>
         </div>
         <div className="right-panel">
-          <div className="no-message">
+          {/* <div className="no-message">
             <img src={NoMessage} alt="" />
             No Messages
-          </div>
+          </div> put component here*/}
+           <Chat /> 
           <div className="send-container">
             <SendMessage />
           </div>
