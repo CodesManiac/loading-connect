@@ -6,6 +6,10 @@ import NoMessage from "../../../assets/icons/no-message.png";
 import User1 from "../../../assets/images/message-user1.png";
 import User2 from "../../../assets/images/message-user2.png";
 import "./styles.scss";
+// import AcceptCard from "./AcceptCard";
+// import DeclineCard from "./DeclineCard";
+// import NegotiateCard from "./NegotiateCard";
+// import BlockCard from "./BlockCard";
 
 const Messages = () => {
   const [activeUser, setActiveUser] = useState(1);
@@ -38,6 +42,11 @@ const Messages = () => {
 
   return (
     <DashboardLayout>
+      {/* {<AcceptCard />} */}
+      {/* <DeclineCard /> */}
+      {/* <NegotiateCard /> */}
+      {/* <BlockCard /> */}
+
       <div className="messages">
         <div className="left-panel">
           <div className="search">
