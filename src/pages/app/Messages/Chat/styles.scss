@@ -12,7 +12,6 @@
     backdrop-filter: blur(50px);
     height: 85px;
     width: 100%;
-    
   }
   .head1 {
     display: flex;
@@ -76,7 +75,7 @@
           line-height: 23px;
           color: #333333;
         }
-        .modal__open{
+        .modal__open {
           position: relative;
         }
       }
@@ -95,6 +94,7 @@
         line-height: 17.7px;
         background: #007683;
         border-radius: 7px;
+        cursor: pointer;
       }
       .btn__decline {
         display: flex;
@@ -111,6 +111,7 @@
         font-weight: 700;
         line-height: 17.7px;
         border-radius: 7px;
+        cursor: pointer;
       }
       .btn__negotiation {
         display: flex;
@@ -127,6 +128,7 @@
         line-height: 17.7px;
         background: #e8e8e8;
         border-radius: 7px;
+        cursor: pointer;
       }
     }
     .messages {

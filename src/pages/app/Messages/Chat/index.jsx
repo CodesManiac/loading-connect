@@ -8,10 +8,20 @@ import acceptBtn from "../../../../assets/icons/acceptBtn.svg";
 import declineBtn from "../../../../assets/icons/declineBtn.svg";
 import negoBtn from "../../../../assets/icons/negoBtn.svg";
 import DropDown from "./DropDown";
-const Chat = () => {
+const Chat = ({
+  handleAcceptClose,
+  handleDeclineClose,
+  handleNegotiateClose,
+  handleBlock,
+}) => {
   const data = [ratingFull, ratingFull, ratingFull, ratingFull, ratingHalf];
 
-  const [openModal, setOpenModal] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
+
+  const handleDropDown = () => {
+    setDropDown(false);
+    handleBlock();
+  };
 
   return (
     <div className="chat">
@@ -33,13 +43,11 @@ const Chat = () => {
           </div>
           <div className="modal__open">
             <img
-              onClick={() => {
-                setOpenModal(true);
-              }}
               src={dropdownBtn}
-              alt=""
+              alt="drop-down-btn"
+              onClick={() => setDropDown(true)}
             />
-            {!openModal && <DropDown />}
+            {dropDown && <DropDown onClose={handleDropDown} />}
           </div>
         </div>
       </div>
@@ -50,15 +58,18 @@ const Chat = () => {
             <h2 className="amount">₦2,500.00</h2>
           </div>
           <div className="flex gap-x-2">
-            <div className="btn__accept">
+            <div
+              onClick={handleAcceptClose}
+              className="btn__accept cursor-pointer"
+            >
               <img src={acceptBtn} alt="accept-btn" />
               <button className="">Accept</button>
             </div>
-            <div className="btn__decline">
+            <div className="btn__decline" onClick={handleDeclineClose}>
               <img src={declineBtn} alt="decline-btn" />
               <button>Decline</button>
             </div>
-            <div className="btn__negotiation">
+            <div onClick={handleNegotiateClose} className="btn__negotiation">
               <img src={negoBtn} alt="decline-btn" />
               <button>Negotiation</button>
             </div>

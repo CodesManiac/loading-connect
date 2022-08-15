@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "../../../components/button";
 import MessageModal from "./MessageModal";
 
-const BlockCard = () => {
+const BlockCard = ({onClose}) => {
   return (
     <MessageModal>
       <h4 className="font-bold">Block John Doe</h4>
@@ -14,9 +14,9 @@ const BlockCard = () => {
         <Link to="/">
           <Button text="Yes, Block" ground="red" />
         </Link>
-        <Link to="/app/settings/about">
-          <Button text="No, Cancel" ground="white" color="#007683" />
-        </Link>
+        <button className="text-[#007683] font-bold mt-4" onClick={onClose}>
+          No, Cancel
+        </button>
       </div>
     </MessageModal>
   );

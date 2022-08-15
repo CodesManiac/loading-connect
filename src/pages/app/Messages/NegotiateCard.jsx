@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "../../../components/button";
 import MessageModal from "./MessageModal";
 
-const NegotiateCard = () => {
+const NegotiateCard = ({onClose}) => {
   return (
     <MessageModal>
       <h4 className="font-bold">Send a new offer</h4>
@@ -21,9 +21,9 @@ const NegotiateCard = () => {
         <Link to="/">
           <Button text="Send New Offer" ground="#007683" />
         </Link>
-        <Link to="/app/settings/about">
-          <Button text="No, Cancel" ground="white" color="#007683" />
-        </Link>
+        <button className="text-[#007683] font-bold mt-4" onClick={onClose}>
+          No, Cancel
+        </button>
       </div>
     </MessageModal>
   );

@@ -1,7 +1,7 @@
 import "./DropDown.scss";
-const DropDown = () => {
+const DropDown = ({ onClose }) => {
   return (
-    <div className="modalBackground z-2">
+    <div className="modalBackground" onClick={onClose}>
       <div className="user-block">
         <p>Block Babatunde Raji</p>
       </div>
