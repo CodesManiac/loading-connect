@@ -16,11 +16,6 @@ const KycVerification = () => {
     setFile(inputImage.name)
   }
 
-  // const hideText =()=>{
-  //   const uploadInfo = document.getElementById("uploads");
-  //   if(file === '')
-  //     uploadInfo.classList.add("hidden-div");
-  // }
   const data = ["International Passport", "Permanent Voter's Card (PVC)", "Driver's License", "National Identification Number (NIN)"]
 
   return (
@@ -39,10 +34,9 @@ const KycVerification = () => {
               <div className='flex justify-between border border-darkGray p-2 rounded-lg'>
                 <p>{child}</p>
                 <div className='flex'>
-                  <input type='radio' name='verification-type' value={child} className='peer'
-                  // checked = {verification === index}
+                  <input type='radio' name='verification-type' value={child} className='sr-only peer'
+                  checked = {verification === index}
                   key = {index}
-                  onClick={()=> setVerification(verification)}
                   />
                   <div className="
                   peer
@@ -55,8 +49,8 @@ const KycVerification = () => {
                   peer-checked:after:bg-secondary
                   after:rounded-full after:h-5 after:w-5 
                   after:transition-all
-                  ">
-                    {/* ring-peer-checked:after:ring-black */}
+                  "
+                  onClick={()=> setVerification(index)}>
                   </div>
                 </div>
               </div>

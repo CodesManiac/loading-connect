@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import DashboardLayout from "../../../components/DashboardLayout";
 import SendMessage from "../../../components/SendMessage";
 import Search from "../../../assets/icons/search.png";
-import NoMessage from "../../../assets/icons/no-message.png";
+//import NoMessage from "../../../assets/icons/no-message.png";
 import User1 from "../../../assets/images/message-user1.png";
 import User2 from "../../../assets/images/message-user2.png";
 import Chat from "./Chat";
 import "./styles.scss";
+// import AcceptCard from "./AcceptCard";
+// import DeclineCard from "./DeclineCard";
+// import NegotiateCard from "./NegotiateCard";
+// import BlockCard from "./BlockCard";
 
 const Messages = () => {
   const [activeUser, setActiveUser] = useState(1);
@@ -39,6 +43,11 @@ const Messages = () => {
 
   return (
     <DashboardLayout>
+      {/* {<AcceptCard />} */}
+      {/* <DeclineCard /> */}
+      {/* <NegotiateCard /> */}
+      {/* <BlockCard /> */}
+
       <div className="messages">
         <div className="left-panel">
           <div className="search">
@@ -78,7 +87,7 @@ const Messages = () => {
             <img src={NoMessage} alt="" />
             No Messages
           </div> put component here*/}
-           <Chat /> 
+          <Chat />
           <div className="send-container">
             <SendMessage />
           </div>
