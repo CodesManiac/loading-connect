@@ -9,7 +9,9 @@
     width: 25%;
     height: 100%;
     padding: 20px;
-    border-right: 1px solid rgba(144,141,141, 0.1);
+    overflow: scroll;
+
+    border-right: 1px solid rgba(144, 141, 141, 0.1);
     .left_card {
       background-color: #fff9e6;
       @include CircularTheme(400, 14px, normal, 17.71px);
@@ -42,6 +44,8 @@
   &-middle {
     padding: 20px;
     width: 25%;
+    overflow: scroll;
+    // background-color: deeppink;
   }
   &-right {
     width: 50%;

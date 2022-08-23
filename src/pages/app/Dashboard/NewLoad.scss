@@ -1,0 +1,83 @@
+@import '../../../defaultStyles/Colors.scss';
+@import '../../../defaultStyles/Typography.scss';
+@import '../../../defaultStyles/MediaQueries.scss';
+
+.form_title {
+  @include CircularTheme(700, 16px, normal, 20px);
+  color: $lightGreen;
+}
+form {
+  .label {
+    @include CircularTheme(400, 12px, normal, 15px);
+    color: $gray;
+  }
+  .textarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $grayColor;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 180px;
+    padding: 1.6em;
+    width: 100%;
+    @include CircularTheme(500, 12px, normal, 12px);
+  }
+  .radio-input {
+    background: $grayColor;
+    border-radius: 10px;
+    padding: 0.6em;
+    .radio-label {
+      @include CircularTheme(400, 12px, normal, 15.18px);
+    }
+    .radio-container {
+      position: relative;
+      width: 100%;
+      margin: 0 0 1em 0;
+      border: 2px solid $borderColor;
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding: 0.6em;
+      cursor: pointer;
+      .title {
+        @include CircularTheme(700, 14px, normal, 17.71px);
+      }
+      .description {
+        @include CircularTheme(400, 12px, normal, 15.18px);
+      }
+      .truck-type-radios:checked {
+        background-color: $secondaryColor !important;
+      }
+    }
+    .checked {
+      border: 2px solid $secondaryColor;
+    }
+  }
+  .kiHXWb {
+    padding: 50px;
+    border: dashed 2px $gray;
+    min-width: 0 !important;
+  }
+  .date-container {
+    display: flex;
+    justify-content: space-between;
+    background: $grayColor;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 67px;
+    padding: 15px;
+
+    width: 100%;
+    @include CircularTheme(500, 12px, normal, 12px);
+    input {
+      background-color: transparent !important;
+      outline: none;
+    }
+  }
+  .label {
+    @include CircularTheme(400, 12px, normal, 15.18px);
+  }
+}
+button {
+  width: 100%;
+}
