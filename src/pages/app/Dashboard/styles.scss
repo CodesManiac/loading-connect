@@ -10,6 +10,7 @@
     // background-color: khaki;
     height: 100%;
     padding: 20px;
+    overflow: scroll;
     border-right: 1px solid #908d8d;
     .left_card {
       background-color: #fff9e6;
@@ -46,6 +47,7 @@
   &-middle {
     padding: 20px;
     width: 25%;
+    overflow: scroll;
     // background-color: deeppink;
   }
   &-right {

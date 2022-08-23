@@ -1,21 +1,28 @@
-import React from "react";
-import DashboardLayout from "../../../components/DashboardLayout";
-import Map from "../../../components/map";
-import Left from "./Left";
-import Middle from "./Middle";
-import "./styles.scss";
+import React, { useState } from 'react';
+import DashboardLayout from '../../../components/DashboardLayout';
+import Map from '../../../components/map';
+import Left from './Left';
+import Middle from './Middle';
+import NewLoad from './NewLoad';
+import './styles.scss';
 
 const Dashboard = () => {
+  const [displayItems, setDisplayItems] = useState('false');
+  const [openCreateLoadForm, setOpenCreateLoadForm] = useState('false');
   return (
     <DashboardLayout>
-      <div className="dashboard">
-        <div className="dashboard-left">
-          <Left />
+      <div className='dashboard'>
+        <div className='dashboard-left'>
+          <Left setOpenCreateLoadForm={setOpenCreateLoadForm} />
         </div>
-        <div className="dashboard-middle">
-          <Middle type='Find Trucks' display="hidden" />
+        <div className='dashboard-middle'>
+          {openCreateLoadForm ? (
+            <NewLoad setOpenCreateLoadForm={setOpenCreateLoadForm} />
+          ) : (
+            <Middle type='Find Trucks' display='hidden' />
+          )}
         </div>
-        <div className="dashboard-right">
+        <div className='dashboard-right'>
           <Map />
         </div>
       </div>
