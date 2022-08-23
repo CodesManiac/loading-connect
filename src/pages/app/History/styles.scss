@@ -7,13 +7,17 @@
   height: 100%;
   .history-firstCol {
     border-right: 1px solid rgba($color: #000, $alpha: 0.05);
-    padding: 20px;
+    padding: 20px 20px 60px 20px;
+    height: 100%;
+    overflow-y: scroll;
   }
   .history-secondCol {
     border-right: 1px solid rgba($color: #000, $alpha: 0.05);
+    overflow-y: scroll;
+    margin-bottom: 100px;
     .track-load {
       height: 100%;
-      .steps {
+      .history-steps {
         height: 780px;
         width: 5px;
         background-color: #ecebe8;
@@ -22,8 +26,10 @@
           width: 100%;
           height: 100%;
         }
+        .inner-step-zero {
+          height: 0px;
+        }
         .inner-step-first {
-
           height: 190px;
         }
         .inner-step-second {
@@ -39,7 +45,7 @@
       .card-section {
         margin-left: -15px;
         .first-section {
-          .circle {
+          .history-circle {
             width: 25px;
             height: 25px;
             background-color: #ecebe8;
@@ -88,8 +94,8 @@
           }
           &-card-active {
             background: rgba(141, 220, 164, 0.2);
-            .first-section-card-title{
-              color: #5FBB97;
+            .first-section-card-title {
+              color: #5fbb97;
               opacity: 1;
               font-weight: 900;
             }
@@ -97,5 +103,14 @@
         }
       }
     }
+  }
+  .history-thirdCol {
+    border-right: 1px solid rgba($color: #000, $alpha: 0.05);
+    padding: 20px;
+    overflow-y: scroll;
+    margin-bottom: 100px;
+  }
+  .history-fourthCol {
+    padding: 20px;
   }
 }

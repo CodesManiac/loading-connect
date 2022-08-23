@@ -10,7 +10,7 @@
     box-sizing: border-box;
     border-radius: 10px;
     height: 67px;
-    padding: 0.6em;
+    padding: 0.8em;
     width: 100%;
     @include CircularTheme(500, 12px, normal, 12px);
 }
@@ -24,6 +24,7 @@
     height: 67px;
     padding: 0.4em 0.6em 0;
     width: 100%;
+    @include CircularTheme(500, 12px, normal, 12px);
 }
 
 .label-field{
@@ -37,8 +38,16 @@
 .input-field{
     background: $grayColor;
     border-radius: 10px;
+    padding: 0 5px;
     border: none;
     font-size: 24px;
+}
+.settings-input{
+    background: $grayColor;
+    border-radius: 10px;
+    border: none;
+    font-size: 24px;
+    padding: 0.2rem 0.1rem 0.875rem 2.25rem;
 }
 .select-input-field{
     background: $grayColor;
@@ -50,6 +59,20 @@
 .input-field::placeholder{
     font-size: 16px;
 }
+
+select {
+    color: $placeholderGray;
+    font-size: 16px;
+}
+// select:enabled{
+//     font-size: 24px;
+//     color: $blackColor;
+// }
+
+// select:focus > option {
+//     font-size: 18px;
+//     color: $blackColor;
+// }
 
 .input-field:-webkit-autofill,
 .input-field:-webkit-autofill:hover, 

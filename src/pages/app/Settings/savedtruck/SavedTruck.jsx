@@ -6,8 +6,8 @@ import Close from '../../../../assets/icons/close.svg';
 const SavedTruck = () => {
   return (
     <SettingsLayout>
-      <div className="settings-saved-left p-5 w-96">
-         <Middle type='Saved Trucks' close={Close}/>
+      <div className="p-5 w-96">
+         <Middle type='Saved Trucks' close={Close} newPath="/open" />
        </div>
        <div className="settings-saved-right">
           

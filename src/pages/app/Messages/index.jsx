@@ -2,12 +2,33 @@ import React, { useState } from "react";
 import DashboardLayout from "../../../components/DashboardLayout";
 import SendMessage from "../../../components/SendMessage";
 import Search from "../../../assets/icons/search.png";
-import NoMessage from "../../../assets/icons/no-message.png";
 import User1 from "../../../assets/images/message-user1.png";
 import User2 from "../../../assets/images/message-user2.png";
+import Chat from "./Chat";
 import "./styles.scss";
+import AcceptCard from "./AcceptCard";
+import DeclineCard from "./DeclineCard";
+import NegotiateCard from "./NegotiateCard";
+import BlockCard from "./BlockCard";
 
 const Messages = () => {
+  const [isAccept, setIsAccept] = useState(false);
+  const [isDecline, setIsDecline] = useState(false);
+  const [isNegotiate, setIsNegotiate] = useState(false);
+  const [isBlock, setIsBlock] = useState(false);
+  const handleAcceptClose = () => {
+    setIsAccept(!isAccept);
+  };
+  const handleDeclineClose = () => {
+    setIsDecline(!isDecline);
+  };
+  const handleNegotiateClose = () => {
+    setIsNegotiate(!isNegotiate);
+  };
+
+  const handleBlock = () => {
+    setIsBlock(!isBlock);
+  };
   const [activeUser, setActiveUser] = useState(1);
   const data = [
     {
@@ -38,6 +59,11 @@ const Messages = () => {
 
   return (
     <DashboardLayout>
+      {isAccept && <AcceptCard onClose={handleAcceptClose} />}
+      {isDecline && <DeclineCard onClose={handleDeclineClose} />}
+      {isNegotiate && <NegotiateCard onClose={handleNegotiateClose} />}
+      {isBlock && <BlockCard onClose={handleBlock} />}
+
       <div className="messages">
         <div className="left-panel">
           <div className="search">
@@ -73,13 +99,14 @@ const Messages = () => {
           </div>
         </div>
         <div className="right-panel">
-          <div className="no-message">
-            <img src={NoMessage} alt="" />
-            No Messages
-          </div>
+          <Chat
+            handleAcceptClose={handleAcceptClose}
+            handleDeclineClose={handleDeclineClose}
+            handleNegotiateClose={handleNegotiateClose}
+            handleBlock={handleBlock}
+          />
           <div className="send-container">
-
-          <SendMessage/>
+            <SendMessage />
           </div>
         </div>
       </div>

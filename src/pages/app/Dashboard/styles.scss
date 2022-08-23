@@ -7,11 +7,11 @@
   height: 100%;
   &-left {
     width: 25%;
-    // background-color: khaki;
     height: 100%;
     padding: 20px;
     overflow: scroll;
-    border-right: 1px solid #908d8d;
+
+    border-right: 1px solid rgba(144, 141, 141, 0.1);
     .left_card {
       background-color: #fff9e6;
       @include CircularTheme(400, 14px, normal, 17.71px);
@@ -22,9 +22,6 @@
       .rr {
         margin-bottom: 20px;
       }
-    }
-    hr {
-      opacity: 0.5;
     }
     .heading {
       @include CircularTheme(400, 12px, normal, 15.18px);

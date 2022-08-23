@@ -1,0 +1,10 @@
+@import "../../../defaultStyles/Colors.scss";
+@import "../../../defaultStyles/Typography.scss";
+@import "../../../defaultStyles/MediaQueries.scss";
+
+.setting-btn{
+    background-color: $primaryColor;
+    padding: 21px 0.5rem;
+    border-radius: 10px;
+    color: $whiteColor;
+}

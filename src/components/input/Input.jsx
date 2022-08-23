@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './input.scss';
 
-const Input = ({ labelName, id, holder, type }) => {
+const Input = ({ labelName, id, holder, type, disabled }) => {
   const [showLabel, setShowLabel] = useState(false);
 
   return (
@@ -13,6 +13,7 @@ const Input = ({ labelName, id, holder, type }) => {
         name={id}
         placeholder={holder}
         required
+        disabled={disabled}
         className='input-field'
         onKeyUp={(e) =>
           e.target.value ? setShowLabel(true) : setShowLabel(false)

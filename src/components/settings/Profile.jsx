@@ -16,8 +16,8 @@ const Profile = () => {
             </label>
             
         </form>
-        <hr className='text-hrgray my-4'/>
-        <div className='flex flex-col gap-5'>
+        <hr className='text-hrgray opacity-10 my-4'/>
+        <form className='flex flex-col gap-5'>
             <div className='flex flex-wrap md:flex-nowrap gap-6'>
                 <Input type='text' holder='First Name' labelName='First Name' />
                 <Input type='text' holder='Last Name' labelName='Last Name' />
@@ -27,13 +27,13 @@ const Profile = () => {
                 <Input type='email' holder='Email' labelName='Email' />
             </div>
             <div className='flex flex-wrap md:flex-nowrap gap-6'>
-                    <Select labelName='State of Residence' />
+                <Select labelName='State of Residence' />
                 <Input type='address' holder='Address' labelName='Address' />
             </div>
             <div>
                 <Button text='Save Changes' action='submit'/>
             </div>
-        </div>
+        </form>
     </div>
   )
 }

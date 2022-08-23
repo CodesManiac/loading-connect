@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Profile_image from '../../assets/images/profile.svg';
 import Star from '../../assets/icons/star.svg';
 import halfStar from '../../assets/icons/half_star.svg';
@@ -15,56 +15,64 @@ import about from '../../assets/icons/about.svg';
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
-  
   const activePath = window.location.pathname.split("/")[3];
-  
+  const [path, setPath] = useState(activePath);
+
   const info = [
     {
       childText: "Edit Profile",
       img: pencil,
       alt: "pencil",
+      activePath: "profile",
       link: "profile"
     },
     {
       childText: "Saved Trucks",
       img: truck,
       alt: "truck",
+      activePath: "saved-truck",
       link: "saved-truck"
     },
     {
       childText: "Recently Viewed Trucks",
       img: recent,
       alt: "recently viewed trucks",
+      activePath: "recent-truck",
       link: "recent-truck"
     },
     {
       childText: "Tools",
       img: tools,
       alt: "tools",
-      link: "tools"
+      activePath: "tools",
+      link: "tools/rate"
     },
     {
       childText: "Notification Settings",
       img: notify,
       alt: "notify me",
+      activePath: "notification",
       link: "notification"
     },
     {
       childText: "Security & Password",
       img: security,
       alt: "lock",
-      link: "security"
+      activePath: "security",
+      link: "security/verification"
     },
     {
       childText: "About Load Connect",
       img: about,
       alt: "about load connect",
+      activePath: "about",
       link: "about"
     },
     {
       childText: "Logout",
       img: logout,
       alt: "logout",
+      activePath: "logout",
       link: "logout"
     },
   ]
@@ -82,10 +90,12 @@ const Sidebar = () => {
             <img src={whiteStar} alt='star' className='text-primary'></img>          
         </div>
       </div>
+      <hr className='text-hrgray opacity-10 my-2'/>
       {info.map((child, index)=> (
       <div
-      className={`hover:bg-orange hover:opacity-75 ${activePath === child.link && "bg-orange"}`}
+      className={` hover:bg-orange hover:opacity-75 ${path === child.activePath && "bg-orange"}`}
       key={index}
+      onClick={()=>setPath(index)}
       >
           <Link to={"/app/settings/" + child.link}><SideOptions display='w-14' image={child.img} alt={child.alt} child={child.childText} /></Link>
       </div>
