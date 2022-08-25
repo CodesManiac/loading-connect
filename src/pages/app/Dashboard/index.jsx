@@ -7,7 +7,6 @@ import NewLoad from './NewLoad';
 import './styles.scss';
 
 const Dashboard = () => {
-  const [displayItems, setDisplayItems] = useState('false');
   const [openCreateLoadForm, setOpenCreateLoadForm] = useState('false');
   return (
     <DashboardLayout>

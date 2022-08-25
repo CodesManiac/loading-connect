@@ -1,6 +1,4 @@
 import React from 'react';
-import Button from '../../../components/button';
-import BareBtn from '../../../components/button/BareBtn';
 import Modal from '../../../components/modal';
 import './ConfirmCancelLoad.scss';
 
