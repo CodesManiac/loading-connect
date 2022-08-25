@@ -10,6 +10,7 @@ import ListOfLoad from "./ListOfLoad"
 import "./styles.scss"
 import LoadDetails from "./LoadDetails";
 import ReceiverDetails from "./ReceiverDetails";
+import RatingCard from "./RatingCard";
 
 const History = () => {
   const [activeStep, setActiveStep] = useState(2);
@@ -20,6 +21,7 @@ useEffect(() => {
 
   return (
     <DashboardLayout>
+      <RatingCard />
       <div className="history">
         <div className="history-firstCol ">
           <ListOfLoad type='Newest First' close={Close} />
