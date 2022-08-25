@@ -12,8 +12,6 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Pickup from '../Settings/tools/rate/Pickup';
 import Calendar from '../../../assets/icons/event_note.svg';
-import Button from '../../../components/button';
-import BareBtn from '../../../components/button/BareBtn';
 import ConfirmCancelLoadModal from './ConfirmCancelLoadModal';
 import ConfirmLoadModal from './ConfirmLoadModal';
 
@@ -22,7 +20,7 @@ const NewLoad = ({ setOpenCreateLoadForm }) => {
   const [truckType, setTruckType] = useState('');
   const [capacityType, setCapacityType] = useState('');
   const fileTypes = ['JPG', 'PNG', 'GIF'];
-  const [file, setFile] = useState(null);
+  const [setFile] = useState(null);
   const [pickupDate, setPickupDate] = useState(new Date());
   const [pickupDeadline, setPickupDeadline] = useState(new Date());
   const [location, setLocation] = useState('');
