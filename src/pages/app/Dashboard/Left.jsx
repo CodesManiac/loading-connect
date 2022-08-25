@@ -4,7 +4,7 @@ import Add from '../../../assets/icons/add.svg';
 import Clock from '../../../assets/icons/clock.svg';
 import Plus from '../../../assets/icons/plus.svg';
 import WatchLater from '../../../assets/icons/watch-later.svg';
-const Left = () => {
+const Left = ({ setOpenCreateLoadForm }) => {
   const routes = [
     {
       id: 1,
@@ -22,10 +22,14 @@ const Left = () => {
       to: 'Admirity Way, Lekki phase 1, Lagos',
     },
   ];
+
   return (
     <div className=''>
       <div className='flex gap-2'>
-        <div className='left_card rounded-lg p-2 mb-6'>
+        <div
+          className='left_card rounded-lg p-2 mb-6 cursor-pointer'
+          onClick={() => setOpenCreateLoadForm(true)}
+        >
           <img src={Plus} alt='plus' />
           <p>Create Load Now</p>
         </div>

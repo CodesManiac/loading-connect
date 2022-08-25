@@ -1,6 +1,6 @@
-@import "../../defaultStyles/Colors.scss";
-@import "../../defaultStyles/Typography.scss";
-@import "../../defaultStyles/MediaQueries.scss";
+@import '../../defaultStyles/Colors.scss';
+@import '../../defaultStyles/Typography.scss';
+@import '../../defaultStyles/MediaQueries.scss';
 
 .switch__container {
   display: flex;
@@ -39,7 +39,7 @@
 .slider:before {
   border-radius: 50%;
   position: absolute;
-  content: "";
+  content: '';
   height: 26px;
   width: 26px;
   left: 4px;
@@ -47,29 +47,29 @@
   background-color: #fff;
   transition: 0.4s;
 }
-input:checked + .slider {
+switch-checkbox:checked + .slider {
   background: red;
 }
 
-input:checked,
+switch-checkbox:checked,
 .slider:before {
   transform: translateX(26px);
   // border: 10px solid red;
 }
-input:checked{
-  background-color:$primaryColor !important;
+switch-checkbox:checked {
+  background-color: $primaryColor !important;
 }
-.green-color{
-  color:$primaryColor;
+.green-color {
+  color: $primaryColor;
   font-weight: 700;
-font-size: 16px;
+  font-size: 16px;
 }
 
-.normal-color{
+.normal-color {
   font-weight: 700;
-font-size: 16px;
-opacity: 0.5;
-color: #19352A;
+  font-size: 16px;
+  opacity: 0.5;
+  color: #19352a;
 }
 
 // .slider .rounded {

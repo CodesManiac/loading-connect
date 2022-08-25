@@ -1,0 +1,18 @@
+@import '../../../defaultStyles/Colors.scss';
+@import '../../../defaultStyles/Typography.scss';
+
+.cancel-modal {
+  background-color: $whiteColor;
+  border-radius: 10px;
+
+  .title {
+    @include CircularTheme(700, 16px, normal, 20.24px);
+  }
+  .description {
+    @include CircularTheme(450, 14px, normal, 17.71px);
+    word-break: break-all;
+  }
+  button {
+    width: 70%;
+  }
+}
