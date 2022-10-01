@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-// import { NavLink } from "react-router-dom";
 import Logo from "../../assets/images/Logo.svg";
 
-const Navbar = ({ page = "Dashboard" }) => {
+const DriverNavbar = ({ page = "Dashboard" }) => {
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const activePath = window.location.pathname.split("/")[2];
 
@@ -83,7 +82,7 @@ const Navbar = ({ page = "Dashboard" }) => {
             <div className="flex space-x-4 ">
               {/* <!-- Current: "bg-gray-900 text-white", Default: "  hover:bg-gray-700 hover:text-white" --> */}
               <a
-                href="/app/dashboard"
+                href="/app/driver-dashboard"
                 className={`bg-gray-900  px-3 py-2 rounded-md  font-medium hover:text-darkGreen ${
                   activePath === "dashboard" && "text-darkGreen"
                 }`}
@@ -93,7 +92,7 @@ const Navbar = ({ page = "Dashboard" }) => {
               </a>
 
               <a
-                href="/app/history"
+                href="/app/driver-history"
                 className={`bg-gray-900  px-3 py-2 rounded-md  font-medium hover:text-darkGreen ${
                   activePath === "history" && "text-darkGreen"
                 }`}
@@ -102,7 +101,7 @@ const Navbar = ({ page = "Dashboard" }) => {
               </a>
 
               <a
-                href="/app/messages"
+                href="/app/driver-messages"
                 className={`bg-gray-900  px-3 py-2 rounded-md  font-medium hover:text-darkGreen ${
                   activePath === "messages" && "text-darkGreen"
                 }`}
@@ -111,7 +110,7 @@ const Navbar = ({ page = "Dashboard" }) => {
               </a>
 
               <a
-                href="/app/settings/profile"
+                href="/app/settings/driver-profile"
                 className={`bg-gray-900  px-3 py-2 rounded-md  font-medium hover:text-darkGreen ${
                   activePath === "settings" && "text-darkGreen"
                 }`}
@@ -170,7 +169,7 @@ const Navbar = ({ page = "Dashboard" }) => {
                 >
                   {/* <!-- Active: "bg-gray-100", Not Active: "" --> */}
                   <a
-                    href="/app/settings/profile"
+                    href="/app/dashboard"
                     className="block px-4 py-2  text-gray-700"
                     role="menuitem"
                     tabindex="-1"
@@ -199,7 +198,7 @@ const Navbar = ({ page = "Dashboard" }) => {
         <div className="px-2 pt-2 pb-3 space-y-1">
           {/* <!-- Current: "bg-gray-900 text-white", Default: "  hover:darkBlack hover:text-white" --> */}
           <a
-            href="/app/dashboard"
+            href="/app/driver-dashboard"
             className=" text-darkGreen block px-3 py-2 rounded-md text-base font-medium"
             aria-current="page"
           >
@@ -207,21 +206,21 @@ const Navbar = ({ page = "Dashboard" }) => {
           </a>
 
           <a
-            href="/app/history"
+            href="/app/driver-history"
             className="  hover:darkBlack hover:text-darkGreen block px-3 py-2 rounded-md text-base font-medium"
           >
             History
           </a>
 
           <a
-            href="/app/messages"
+            href="/app/driver-messages"
             className="  hover:darkBlack hover:text-darkGreen block px-3 py-2 rounded-md text-base font-medium"
           >
             Messages
           </a>
 
           <a
-            href="/app/settings/profile"
+            href="/app/settings/driver-profile"
             className="  hover:darkBlack hover:text-darkGreen block px-3 py-2 rounded-md text-base font-medium"
           >
             Settings
@@ -231,4 +230,4 @@ const Navbar = ({ page = "Dashboard" }) => {
     </nav>
   );
 };
-export default Navbar;
+export default DriverNavbar;

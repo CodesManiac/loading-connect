@@ -1,10 +1,9 @@
 import React from 'react'
-import Input from '../../components/input/Input'
 import Button from '../button'
-import Select from '../input/Select'
-import profile from '../../assets/images/profile.svg'
+import Input from '../input/Input'
+import profile from '../../assets/images/driver-logo.svg'
 
-const Profile = () => {
+const DriverProfiles = () => {
   return (
     <div className='p-20'>
         <form className="flex  gap-24 items-center space-x-6">
@@ -26,8 +25,7 @@ const Profile = () => {
                 <Input type='text' holder='Phone Number' labelName='Phone Number' />
                 <Input type='email' holder='Email' labelName='Email' />
             </div>
-            <div className='flex flex-wrap md:flex-nowrap gap-6'>
-                <Select labelName='State of Residence' />
+            <div className='w-3/6 pr-3'>
                 <Input type='address' holder='Address' labelName='Address' />
             </div>
             <div className='w-4/4 md:w-1/4'>
@@ -38,4 +36,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default DriverProfiles

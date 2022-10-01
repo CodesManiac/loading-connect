@@ -27,6 +27,8 @@ import AboutPage from "./pages/app/Settings/about/About";
 import Logout from "./pages/app/Settings/logout/Logout";
 import Saved2Screen from "./pages/app/Settings/savedtruck/Saved2screen";
 import Recent2Screen from "./pages/app/Settings/recenttruck/Recent2Screen";
+import DriverProfile from "./pages/app/DriverSettings/profile/DriverProfile";
+import SavedLoads from "./pages/app/DriverSettings/savedLoads/SavedLoads";
 
 function App() {
   return (
@@ -62,6 +64,9 @@ function App() {
         <Route path="/app/settings/logout" element={<Logout />} />
         <Route path="/app/messages" element={<Messages/>} />
         <Route path="/forget-password" element={<ForgetPassword />} />
+
+        <Route path="/app/settings/driver-profile" element={<DriverProfile />} />
+        <Route path="/app/settings/driver-saved-loads" element={<SavedLoads />} />
       </Routes>
     </Router>
   );
