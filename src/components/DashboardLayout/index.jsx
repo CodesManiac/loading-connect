@@ -5,9 +5,11 @@ import Navbar from "./navbar";
 import Bell from "../../assets/icons/notificationsBell.png";
 import "./styles.scss";
 import Notifications from "./notification";
+import DriverNavbar from "./DriverNavbar";
 
-const DashboardLayout = ({ children }) => {
+const DashboardLayout = ({ children, out }) => {
   const [isNotification, setIsNotification] = useState(false);
+  const [nav] = useState(out);
   // useEffect(() => {
   //   const auth = window.localStorage.getItem("auth");
   //   if (!auth) {
@@ -21,7 +23,7 @@ const DashboardLayout = ({ children }) => {
   };
   return (
     <div className="dashboardlayout">
-      <Navbar />
+      {nav ? <DriverNavbar /> : <Navbar />}
       <div
         className="notification bg-primary"
         onClick={handleNotificationClose}
